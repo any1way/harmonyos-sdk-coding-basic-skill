@@ -144,6 +144,7 @@ Hybrid Top 5 results for "怎么让应用启动更快" (searched 12232 docs in 0
 - **依赖**：torch（CPU 版）+ transformers + faiss-cpu + numpy + modelscope（可选，用于模型下载），约 2GB。
   - 安装：`pip install torch transformers faiss-cpu numpy modelscope`
 - **纯 BM25 回退**：若未安装上述依赖，`search.py` 仍可独立使用（纯 Python 标准库）。
+- **Windows 长路径**：`references/` 含 12000+ 文档，部分中文目录名较长。克隆到 Windows 深目录时需启用 Git 长路径支持，否则 `git checkout` 会报 "Filename too long"。执行 `git config --global core.longpaths true` 后再克隆即可（详见 [README.md](../README.md#windows-用户重要提示长路径支持)）。macOS/Linux 无此问题。
 
 #### 索引维护
 
