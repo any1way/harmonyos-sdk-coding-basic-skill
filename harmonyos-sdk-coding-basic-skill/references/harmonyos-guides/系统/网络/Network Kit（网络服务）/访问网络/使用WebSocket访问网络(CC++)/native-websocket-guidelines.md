@@ -1,0 +1,372 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/native-websocket-guidelines
+title: 使用WebSocket访问网络(C/C++)
+breadcrumb: 指南 > 系统 > 网络 > Network Kit（网络服务） > 访问网络 > 使用WebSocket访问网络(C/C++)
+category: harmonyos-guides
+scraped_at: 2026-06-11T14:48:08+08:00
+doc_updated_at: 2026-05-26
+content_hash: sha256:1b7261c74ce819aabd8fb1efd56ebd36dea6d4901fe7508ae5ef0653137cfdb3
+---
+## 场景介绍
+
+通过WebSocket模块可以建立服务器与客户端的双向连接。
+
+## 接口说明
+
+WebSocket常用接口如下表所示，详细的接口说明请参考[net\_websocket.h](<../../../../../../harmonyos-references/网络/Network Kit（网络服务）/C API/头文件/net_websocket.h/capi-net-websocket-h.md>)。
+
+| 接口名 | 描述 |
+| --- | --- |
+| OH\_WebSocketClient\_Constructor(WebSocket\_OnOpenCallback onOpen, WebSocket\_OnMessageCallback onMessage, WebSocket\_OnErrorCallback onError, WebSocket\_OnCloseCallback onclose) | WebSocket客户端的构造函数。 |
+| OH\_WebSocketClient\_AddHeader(struct WebSocket \*client, struct WebSocket\_Header header) | 将header头信息添加到client客户端request中。 |
+| OH\_WebSocketClient\_Connect(struct WebSocket \*client, const char \*url, struct WebSocket\_RequestOptions options) | 客户端连接服务端。 |
+| OH\_WebSocketClient\_Send(struct WebSocket \*client, char \*data, size\_t length) | 客户端向服务端发送数据。 |
+| OH\_WebSocketClient\_Close(struct WebSocket \*client, struct WebSocket\_CloseOption options) | 客户端主动关闭websocket连接。 |
+| OH\_WebSocketClient\_Destroy(struct WebSocket \*client) | 释放websocket连接上下文和资源。 |
+
+## WebSocket接口开发示例
+
+### 开发步骤
+
+使用本文档涉及接口创建并连接到WebSocket服务器时，需先创建Native C++工程，在源文件中封装相关接口，然后在ArkTS层调用封装好的接口，使用hilog或console.info等方法将日志打印到控制台或生成设备日志。
+
+本文以建立与WebSocket服务器的连接、向WebSocket服务器发送消息、关闭WebSocket连接为例，提供具体的开发指导。
+
+### 添加开发依赖
+
+**添加动态链接库**
+
+CMakeLists.txt中添加以下lib:
+
+```
+1. libace_napi.z.so
+2. libnet_websocket.so
+```
+
+**头文件**
+
+```
+1. #include "napi/native_api.h"
+2. #include "network/netstack/net_websocket.h"
+3. #include "network/netstack/net_websocket_type.h"
+```
+
+### 构建工程
+
+1、在源文件中编写调用该API的代码，接受ArkTS传递过来的url字符串参数，创建WebSocket对象指针后，检查连接到服务器是否成功。
+
+```
+1. #include "napi/native_api.h"
+2. #include "network/netstack/net_websocket.h"
+3. #include "network/netstack/net_websocket_type.h"
+4. #include "hilog/log.h"
+
+6. #include <cstring>
+
+8. #undef LOG_DOMAIN
+9. #undef LOG_TAG
+10. #define LOG_DOMAIN 0x3200 // 全局domain宏，标识业务领域
+11. #define LOG_TAG "WSDEMO"  // 全局tag宏，标识模块日志tag
+
+14. // WebSocket客户端全局变量
+15. static struct WebSocket *g_client = nullptr;
+
+17. static void onOpen(struct WebSocket *wsClient, WebSocket_OpenResult openResult)
+18. {
+19. (void)wsClient;
+20. OH_LOG_INFO(LOG_APP, "onOpen: code: %{public}u, reason: %{public}s", openResult.code, openResult.reason);
+21. }
+
+23. static void onMessage(struct WebSocket *wsClient, char *data, uint32_t length)
+24. {
+25. (void)wsClient;
+26. char *tmp = new char[length + 1];
+27. for (uint32_t i = 0; i < length; i++) {
+28. tmp[i] = data[i];
+29. }
+30. tmp[length] = '\0';
+31. OH_LOG_INFO(LOG_APP, "onMessage: len: %{public}u, data: %{public}s", length, tmp);
+32. delete[] tmp;
+33. }
+
+35. static void onError(struct WebSocket *wsClient, WebSocket_ErrorResult errorResult)
+36. {
+37. (void)wsClient;
+38. OH_LOG_INFO(LOG_APP, "onError: code: %{public}u, message: %{public}s", errorResult.errorCode,
+39. errorResult.errorMessage);
+40. }
+
+42. static void onClose(struct WebSocket *wsClient, WebSocket_CloseResult closeResult)
+43. {
+44. (void)wsClient;
+45. OH_LOG_INFO(LOG_APP, "onClose: code: %{public}u, reason: %{public}s", closeResult.code, closeResult.reason);
+46. }
+
+48. static napi_value ConnectWebsocket(napi_env env, napi_callback_info info)
+49. {
+50. size_t argc = 2;
+51. napi_value args[2] = {nullptr};
+52. napi_value result;
+
+54. napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
+
+56. size_t length = 0;
+57. napi_status status = napi_get_value_string_utf8(env, args[0], nullptr, 0, &length);
+58. if (status != napi_ok) {
+59. napi_get_boolean(env, false, &result);
+60. return result;
+61. }
+
+63. if (g_client != nullptr) {
+64. OH_LOG_INFO(LOG_APP, "there is already one websocket client running.");
+65. napi_get_boolean(env, false, &result);
+66. return result;
+67. }
+68. char *buf = new char[length + 1];
+69. std::memset(buf, 0, length + 1);
+70. napi_get_value_string_utf8(env, args[0], buf, length + 1, &length);
+71. // 创建WebSocket Client对象指针
+72. g_client = OH_WebSocketClient_Constructor(onOpen, onMessage, onError, onClose);
+73. if (g_client == nullptr) {
+74. delete[] buf;
+75. napi_get_boolean(env, false, &result);
+76. return result;
+77. }
+78. // 连接buf存放的URL对应的WebSocket服务器
+79. int connectRet = OH_WebSocketClient_Connect(g_client, buf, {});
+
+81. delete[] buf;
+82. napi_get_boolean(env, connectRet == 0, &result);
+83. return result;
+84. }
+
+87. static napi_value SendMessage(napi_env env, napi_callback_info info)
+88. {
+89. size_t argc = 1;
+90. napi_value args[1] = {nullptr};
+91. napi_value result;
+
+93. napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
+
+95. size_t length = 0;
+96. napi_status status = napi_get_value_string_utf8(env, args[0], nullptr, 0, &length);
+97. if (status != napi_ok) {
+98. napi_create_int32(env, -1, &result);
+99. return result;
+100. }
+
+102. if (g_client == nullptr) {
+103. OH_LOG_INFO(LOG_APP, "websocket client not connected.");
+104. napi_create_int32(env, WebSocket_ErrCode::WEBSOCKET_CLIENT_NULL, &result);
+105. return result;
+106. }
+107. char *buf = new char[length + 1];
+108. std::memset(buf, 0, length + 1);
+109. napi_get_value_string_utf8(env, args[0], buf, length + 1, &length);
+110. // 发送buf中的消息给服务器
+111. int ret = OH_WebSocketClient_Send(g_client, buf, length);
+
+113. delete[] buf;
+114. napi_create_int32(env, ret, &result);
+115. return result;
+116. }
+
+118. static napi_value CloseWebsocket(napi_env env, napi_callback_info info)
+119. {
+120. napi_value result;
+121. if (g_client == nullptr) {
+122. OH_LOG_INFO(LOG_APP, "websocket client not connected.");
+123. napi_create_int32(env, -1, &result);
+124. return result;
+125. }
+126. // 关闭WebSocket连接
+127. int ret = OH_WebSocketClient_Close(g_client, {
+128. .code = 0,
+129. .reason = "Actively Close",
+130. });
+131. // 释放WebSocket资源并置空
+132. OH_WebSocketClient_Destroy(g_client);
+133. g_client = nullptr;
+134. napi_create_int32(env, ret, &result);
+135. return result;
+136. }
+```
+
+[napi\_init.cpp](https://gitcode.com/HarmonyOS_Samples/guide-snippets/blob/HarmonyOS-feature-20260402/NetWork_Kit/NetWorkKit_Datatransmission/WebSocket_C/entry/src/main/cpp/napi_init.cpp#L16-L152)
+
+ConnectWebsocket函数接收一个WebSocket URL并尝试连接，连接成功返回true，否则返回false。在创建代表WebSocket客户端的WebSocket结构体指针前，需要定义以下回调函数：连接开启时的onOpen回调、接收普通消息的onMessage回调、接收错误消息的onError回调、接收关闭消息的onClose回调。在示例代码中，还调用了[OH\_WebSocketClient\_Send](<../../../../../../harmonyos-references/网络/Network Kit（网络服务）/C API/头文件/net_websocket.h/capi-net-websocket-h.md#oh_websocketclient_send>)、[OH\_WebSocketClient\_Close](<../../../../../../harmonyos-references/网络/Network Kit（网络服务）/C API/头文件/net_websocket.h/capi-net-websocket-h.md#oh_websocketclient_close>)等函数向服务器发送消息，主动关闭WebSocket连接。
+
+2、将通过napi封装好的napi\_value类型对象初始化导出，通过外部函数接口，将函数暴露给JavaScript使用。示例代码中，ConnectWebsocket函数就会作为外部函数Connect暴露出去；SendMessage函数作为外部函数Send暴露出去；CloseWebsocket函数作为外部函数Close暴露出去。
+
+```
+1. EXTERN_C_START
+2. static napi_value Init(napi_env env, napi_value exports)
+3. {
+4. napi_property_descriptor desc[] = {
+5. {"Connect", nullptr, ConnectWebsocket, nullptr, nullptr, nullptr, napi_default, nullptr},
+6. {"Send", nullptr, SendMessage, nullptr, nullptr, nullptr, napi_default, nullptr},
+7. {"Close", nullptr, CloseWebsocket, nullptr, nullptr, nullptr, napi_default, nullptr},
+8. };
+9. napi_define_properties(env, exports, sizeof(desc) / sizeof(desc[0]), desc);
+10. return exports;
+11. }
+12. EXTERN_C_END
+```
+
+[napi\_init.cpp](https://gitcode.com/HarmonyOS_Samples/guide-snippets/blob/HarmonyOS-feature-20260402/NetWork_Kit/NetWorkKit_Datatransmission/WebSocket_C/entry/src/main/cpp/napi_init.cpp#L154-L167)
+
+3、将上一步中初始化成功的对象通过RegisterEntryModule函数，使用napi\_module\_register函数将模块注册到 Node.js 中。
+
+```
+1. static napi_module demoModule = {
+2. .nm_version = 1,
+3. .nm_flags = 0,
+4. .nm_filename = nullptr,
+5. .nm_register_func = Init,
+6. .nm_modname = "entry",
+7. .nm_priv = ((void *)0),
+8. .reserved = {0},
+9. };
+
+11. extern "C" __attribute__((constructor)) void RegisterEntryModule(void) { napi_module_register(&demoModule); }
+```
+
+[napi\_init.cpp](https://gitcode.com/HarmonyOS_Samples/guide-snippets/blob/HarmonyOS-feature-20260402/NetWork_Kit/NetWorkKit_Datatransmission/WebSocket_C/entry/src/main/cpp/napi_init.cpp#L169-L181)
+
+4、在工程的index.d.ts文件中定义函数的类型。比如，Connect函数接受一个string参数作为入参，并返回boolean值指示WebSocket连接是否能成功建立。
+
+```
+1. export const Connect: (url: string) => boolean;
+2. export const Send: (data: string) => number;
+3. export const Close: () => number;
+```
+
+[Index.d.ts](https://gitcode.com/HarmonyOS_Samples/guide-snippets/blob/HarmonyOS-feature-20260402/NetWork_Kit/NetWorkKit_Datatransmission/WebSocket_C/entry/src/main/cpp/types/libentry/Index.d.ts#L15-L19)
+
+5、在index.ets文件中对上述封装好的接口进行调用。
+
+```
+1. import testWebsocket from 'libentry.so';
+
+3. @Entry
+4. @Component
+5. struct Index {
+6. @State wsUrl: string = '';
+7. @State content: string = '';
+8. @State connecting: boolean = false;
+
+10. build() {
+11. Navigation() {
+12. Column() {
+13. Column() {
+14. Text($r('app.string.WebSocket_address'))
+15. .fontColor(Color.Gray)
+16. .textAlign(TextAlign.Start)
+17. .width('100%')
+18. TextInput()
+19. .width('100%')
+20. .id('textInput_address')
+21. .onChange((value) => {
+22. this.wsUrl = value;
+23. })
+24. }
+25. .margin({
+26. bottom: 16 // 与底间隔
+27. })
+28. .padding({
+29. left: 16, // 与左间隔
+30. right: 16 // 与右间隔
+31. })
+
+33. Column() {
+34. Text($r('app.string.Content'))
+35. .fontColor(Color.Gray)
+36. .textAlign(TextAlign.Start)
+37. .width('100%')
+38. TextInput()
+39. .width('100%')
+40. .id('textInput_content')
+41. .enabled(this.connecting)
+42. .onChange((value) => {
+43. this.content = value;
+44. })
+45. }
+46. .margin({
+47. bottom: 16 // 与底间隔
+48. })
+49. .padding({
+50. left: 16, // 与左间隔
+51. right: 16 // 与右间隔
+52. })
+
+54. Blank()
+
+56. Column({
+57. space: 12 // 占位空间
+58. }) {
+59. Button($r('app.string.Connect'))
+60. .id('Connect')
+61. .enabled(!this.connecting)
+62. .onClick(() => {
+63. let connRet = testWebsocket.Connect(this.wsUrl);
+64. if (connRet) {
+65. this.connecting = true;
+66. // ···
+67. }
+68. // ···
+69. })
+70. Button($r('app.string.Send'))
+71. .id('Send')
+72. .enabled(this.connecting)
+73. .onClick(() => {
+74. testWebsocket.Send(this.content);
+75. // ···
+76. })
+77. Button($r('app.string.Close'))
+78. .id('Close')
+79. .enabled(this.connecting)
+80. .onClick(() => {
+81. let closeResult = testWebsocket.Close();
+82. if (closeResult != -1) {
+83. this.connecting = false;
+84. // ···
+85. }
+86. // ···
+87. })
+88. }
+89. }
+90. }
+91. }
+92. }
+```
+
+[Index.ets](https://gitcode.com/HarmonyOS_Samples/guide-snippets/blob/HarmonyOS-feature-20260402/NetWork_Kit/NetWorkKit_Datatransmission/WebSocket_C/entry/src/main/ets/pages/Index.ets#L17-L155)
+
+6、配置CMakeLists.txt，本模块需要用到的共享库是libnet\_websocket.so，在工程自动生成的CMakeLists.txt中的target\_link\_libraries中添加此共享库。
+
+注意：如图所示，在add\_library中的entry是工程自动生成的modename，若要做修改，需和步骤3中.nm\_modname保持一致。
+
+![](https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_scene_100_1/20/v3/__1YurGxTu60znH76DeT8g/zh-cn_image_0000002592378780.png?HW-CC-KV=V1&HW-CC-Date=20260611T064806Z&HW-CC-Expire=86400&HW-CC-Sign=826192BC83AAA25B1115DF04FD72519B0D51D250888E93D2B32178EC117C9AA2)
+
+7、调用WebSocket C API接口要求应用拥有ohos.permission.INTERNET权限，在module.json5中的requestPermissions项添加该权限。
+
+经过以上步骤，整个工程的搭建已经完成，接下来就可以连接设备运行工程进行日志查看了。
+
+## 测试步骤
+
+1、连接设备，使用DevEco Studio打开搭建好的工程。
+
+2、运行工程，设备上会弹出以下图片所示界面：
+
+![](https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_scene_100_1/2d/v3/UVhxTergSzKCREkpSfa6Pg/zh-cn_image_0000002622858287.jpg?HW-CC-KV=V1&HW-CC-Date=20260611T064806Z&HW-CC-Expire=86400&HW-CC-Sign=7E8B47FBADCA790429AFCD316DB9EC006F774EB2FA89A36D54D68D56A9FF6A28)
+
+简要说明：
+
+* 在第一行的输入框中，输入ws://或wss://开头的WebSocket URL。
+* 在输入完WebSocket URL，点击Connect按钮后，如果访问成功，会触发onOpen的回调，打印日志。
+* 在Content输入框里输入要发送给服务器的内容，点击Send按钮发送。如果服务器返回消息，会触发onMessage回调，打印日志。
+* 点击Close按钮，WebSocket连接释放，可以重新输入新的WebSocket URL。
+
+![](https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_scene_100_1/a6/v3/sm049SnZSZWvIHVxWQP6lg/zh-cn_image_0000002622698409.jpg?HW-CC-KV=V1&HW-CC-Date=20260611T064806Z&HW-CC-Expire=86400&HW-CC-Sign=F84D5A6934584C9E0ECF23A211832B1C256315A73D9223FAE09D069772DE89F3)
+
+![](https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_scene_100_1/78/v3/xI8XUMLvRo6ZOS0sMP2_tA/zh-cn_image_0000002592218848.png?HW-CC-KV=V1&HW-CC-Date=20260611T064806Z&HW-CC-Expire=86400&HW-CC-Sign=D4555756077DB4266D8533570F57E817C81CE2EEE6E441E70DFA90D980F1F389)

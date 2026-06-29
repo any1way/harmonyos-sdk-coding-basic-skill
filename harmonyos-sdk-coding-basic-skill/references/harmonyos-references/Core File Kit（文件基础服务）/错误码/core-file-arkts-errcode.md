@@ -1,0 +1,10 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-arkts-errcode
+title: 错误码
+breadcrumb: API参考 > 应用框架 > Core File Kit（文件基础服务） > 错误码
+category: harmonyos-references
+scraped_at: 2026-06-01T15:57:59+08:00
+doc_updated_at: 2026-03-09
+content_hash: sha256:e9844b976ae474366d356194ec25fed1eb13e91de1b3d94ce850f062958cef05
+---
+* **[文件管理错误码](文件管理错误码/errorcode-filemanagement.md)**

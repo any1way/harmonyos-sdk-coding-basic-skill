@@ -1,0 +1,41 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-references/common-basic-struct
+title: 结构体
+breadcrumb: API参考 > 公共基础能力 > C API > 结构体
+category: harmonyos-references
+scraped_at: 2026-06-11T16:53:04+08:00
+doc_updated_at: 2026-06-03
+content_hash: sha256:3dbbfc9e9177956227f8125a020e108a83a46b1b2876d970c17edfd0339555ec
+---
+* **[JSVM\_CallbackStruct](JSVM_CallbackStruct/capi-jsvm-jsvm-callbackstruct.md)**
+* **[JSVM\_HeapStatistics](JSVM_HeapStatistics/capi-jsvm-jsvm-heapstatistics.md)**
+* **[JSVM\_InitOptions](JSVM_InitOptions/capi-jsvm-jsvm-initoptions.md)**
+* **[JSVM\_CreateVMOptions](JSVM_CreateVMOptions/capi-jsvm-jsvm-createvmoptions.md)**
+* **[JSVM\_VMInfo](JSVM_VMInfo/capi-jsvm-jsvm-vminfo.md)**
+* **[JSVM\_PropertyDescriptor](JSVM_PropertyDescriptor/capi-jsvm-jsvm-propertydescriptor.md)**
+* **[JSVM\_ExtendedErrorInfo](JSVM_ExtendedErrorInfo/capi-jsvm-jsvm-extendederrorinfo.md)**
+* **[JSVM\_TypeTag](JSVM_TypeTag/capi-jsvm-jsvm-typetag.md)**
+* **[JSVM\_PropertyHandlerConfigurationStruct](JSVM_PropertyHandlerConfigurationStruct/capi-jsvm-jsvm-propertyhandlerconfigurationstruct.md)**
+* **[JSVM\_ScriptOrigin](JSVM_ScriptOrigin/capi-jsvm-jsvm-scriptorigin.md)**
+* **[JSVM\_CompileOptions](JSVM_CompileOptions/capi-jsvm-jsvm-compileoptions.md)**
+* **[JSVM\_CodeCache](JSVM_CodeCache/capi-jsvm-jsvm-codecache.md)**
+* **[JSVM\_PropertyHandler](JSVM_PropertyHandler/capi-jsvm-jsvm-propertyhandler.md)**
+* **[JSVM\_DefineClassOptions](JSVM_DefineClassOptions/capi-jsvm-jsvm-defineclassoptions.md)**
+* **[JSVM\_VM\_\_\*](JSVM_VM__/capi-jsvm-jsvm-vm--8h.md)**
+* **[JSVM\_VMScope\_\_\*](JSVM_VMScope__/capi-jsvm-jsvm-vmscope--8h.md)**
+* **[JSVM\_EnvScope\_\_\*](JSVM_EnvScope__/capi-jsvm-jsvm-envscope--8h.md)**
+* **[JSVM\_Script\_\_\*](JSVM_Script__/capi-jsvm-jsvm-script--8h.md)**
+* **[JSVM\_Env\_\_\*](JSVM_Env__/capi-jsvm-jsvm-env--8h.md)**
+* **[JSVM\_CpuProfiler\_\_\*](JSVM_CpuProfiler__/capi-jsvm-jsvm-cpuprofiler--8h.md)**
+* **[JSVM\_Value\_\_\*](JSVM_Value__/capi-jsvm-jsvm-value--8h.md)**
+* **[JSVM\_Data\_\_\*](JSVM_Data__/capi-jsvm-jsvm-data--8h.md)**
+* **[JSVM\_Ref\_\_\*](JSVM_Ref__/capi-jsvm-jsvm-ref--8h.md)**
+* **[JSVM\_HandleScope\_\_\*](JSVM_HandleScope__/capi-jsvm-jsvm-handlescope--8h.md)**
+* **[JSVM\_EscapableHandleScope\_\_\*](JSVM_EscapableHandleScope__/capi-jsvm-jsvm-escapablehandlescope--8h.md)**
+* **[JSVM\_CallbackInfo\_\_\*](JSVM_CallbackInfo__/capi-jsvm-jsvm-callbackinfo--8h.md)**
+* **[JSVM\_Deferred\_\_\*](JSVM_Deferred__/capi-jsvm-jsvm-deferred--8h.md)**
+* **[JSVM\_CallbackStruct\*](JSVM_CallbackStruct/capi-jsvm-jsvm-callbackstruct8h.md)**
+* **[JSVM\_PropertyHandlerConfigurationStruct\*](JSVM_PropertyHandlerConfigurationStruct/capi-jsvm-propertyhandlerconfigurationstruct8h.md)**
+* **[JSVM\_CompileProfile](JSVM_CompileProfile/capi-jsvm-jsvm-compileprofile.md)**
+* **[PurgMem](PurgMem/capi-memory-purgmem.md)**
+* **[JSVM\_DeserializeResult](JSVM_DeserializeResult/capi-jsvm-jsvm-deserializeresult.md)**

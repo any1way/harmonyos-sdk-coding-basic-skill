@@ -1,0 +1,45 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-references/audio-struct
+title: 结构体
+breadcrumb: API参考 > 媒体 > Audio Kit（音频服务） > C API > 结构体
+category: harmonyos-references
+scraped_at: 2026-06-11T16:26:41+08:00
+doc_updated_at: 2026-06-03
+content_hash: sha256:12ef896a205cd049f9deabc0ee065d1b054473f0d1a42a12f35f057518e27d9b
+---
+* **[OH\_AudioManager](OH_AudioManager/capi-ohaudio-oh-audiomanager.md)**
+* **[OH\_AudioRoutingManager](OH_AudioRoutingManager/capi-ohaudio-oh-audioroutingmanager.md)**
+* **[OH\_AudioSession\_Strategy](OH_AudioSession_Strategy/capi-ohaudio-oh-audiosession-strategy.md)**
+* **[OH\_AudioSession\_DeactivatedEvent](OH_AudioSession_DeactivatedEvent/capi-ohaudio-oh-audiosession-deactivatedevent.md)**
+* **[OH\_AudioSession\_StateChangedEvent](OH_AudioSession_StateChangedEvent/capi-ohaudio-oh-audiosession-statechangedevent.md)**
+* **[OH\_AudioSessionManager](OH_AudioSessionManager/capi-ohaudio-oh-audiosessionmanager.md)**
+* **[OH\_AudioStreamManager](OH_AudioStreamManager/capi-ohaudio-oh-audiostreammanager.md)**
+* **[OH\_AudioVolumeManager](OH_AudioVolumeManager/capi-ohaudio-oh-audiovolumemanager.md)**
+* **[OH\_AudioDeviceDescriptorArray](OH_AudioDeviceDescriptorArray/capi-ohaudio-oh-audiodevicedescriptorarray.md)**
+* **[OH\_AudioDeviceDescriptor](OH_AudioDeviceDescriptor/capi-ohaudio-oh-audiodevicedescriptor.md)**
+* **[OH\_AudioResourceManager](OH_AudioResourceManager/capi-ohaudio-oh-audioresourcemanager.md)**
+* **[OH\_AudioWorkgroup](OH_AudioWorkgroup/capi-ohaudio-oh-audioworkgroup.md)**
+* **[OH\_AudioStreamInfo](OH_AudioStreamInfo/capi-ohaudio-oh-audiostreaminfo.md)**
+* **[OH\_AudioRenderer\_Callbacks\_Struct](OH_AudioRenderer_Callbacks_Struct/capi-ohaudio-oh-audiorenderer-callbacks-struct.md)**
+* **[OH\_AudioCapturer\_Callbacks\_Struct](OH_AudioCapturer_Callbacks_Struct/capi-ohaudio-oh-audiocapturer-callbacks-struct.md)**
+* **[OH\_AudioStreamBuilderStruct](OH_AudioStreamBuilderStruct/capi-ohaudio-oh-audiostreambuilderstruct.md)**
+* **[OH\_AudioRendererStruct](OH_AudioRendererStruct/capi-ohaudio-oh-audiorendererstruct.md)**
+* **[OH\_AudioCapturerStruct](OH_AudioCapturerStruct/capi-ohaudio-oh-audiocapturerstruct.md)**
+* **[OH\_AudioFormat](OH_AudioFormat/capi-ohaudiosuite-oh-audioformat.md)**
+* **[OH\_AudioDataArray](OH_AudioDataArray/capi-ohaudiosuite-oh-audiodataarray.md)**
+* **[OH\_EqualizerFrequencyBandGains](OH_EqualizerFrequencyBandGains/capi-ohaudiosuite-oh-equalizerfrequencybandgains.md)**
+* **[OH\_AudioSuiteEngineStruct](OH_AudioSuiteEngineStruct/capi-ohaudiosuite-oh-audiosuiteenginestruct.md)**
+* **[OH\_AudioSuitePipelineStruct](OH_AudioSuitePipelineStruct/capi-ohaudiosuite-oh-audiosuitepipelinestruct.md)**
+* **[OH\_AudioNodeStruct](OH_AudioNodeStruct/capi-ohaudiosuite-oh-audionodestruct.md)**
+* **[OH\_AudioNodeBuilderStruct](OH_AudioNodeBuilderStruct/capi-ohaudiosuite-oh-audionodebuilderstruct.md)**
+* **[OH\_AudioSuite\_SpaceRenderPositionParams](OH_AudioSuite_SpaceRenderPositionParams/capi-ohaudiosuite-spacerenderpositionparams.md)**
+* **[OH\_AudioSuite\_PureVoiceChangeOption](OH_AudioSuite_PureVoiceChangeOption/capi-ohaudiosuite-purevoicechangeoption.md)**
+* **[OH\_AudioSuite\_SpaceRenderExtensionParams](OH_AudioSuite_SpaceRenderExtensionParams/capi-ohaudiosuite-spacerenderextensionparams.md)**
+* **[OH\_AudioSuite\_SpaceRenderRotationParams](OH_AudioSuite_SpaceRenderRotationParams/capi-ohaudiosuite-spacerenderrotationparams.md)**
+* **[OH\_MIDIEvent](OH_MIDIEvent/capi-ohmidi-oh-midievent.md)**
+* **[OH\_MIDIDeviceInformation](OH_MIDIDeviceInformation/capi-ohmidi-oh-midideviceinformation.md)**
+* **[OH\_MIDIPortInformation](OH_MIDIPortInformation/capi-ohmidi-oh-midiportinformation.md)**
+* **[OH\_MIDIPortDescriptor](OH_MIDIPortDescriptor/capi-ohmidi-oh-midiportdescriptor.md)**
+* **[OH\_MIDICallbacks](OH_MIDICallbacks/capi-ohmidi-oh-midicallbacks.md)**
+* **[OH\_MIDIClientStruct](OH_MIDIClientStruct/capi-ohmidi-oh-midiclientstruct.md)**
+* **[OH\_MIDIDeviceStruct](OH_MIDIDeviceStruct/capi-ohmidi-oh-mididevicestruct.md)**

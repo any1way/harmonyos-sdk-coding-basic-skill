@@ -1,0 +1,25 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-access-specifications
+title: 接入规范学习
+breadcrumb: 指南 > 应用服务 > Payment Kit（鸿蒙支付服务） > 接入规范学习
+category: harmonyos-guides
+scraped_at: 2026-06-11T15:11:20+08:00
+doc_updated_at: 2026-04-20
+content_hash: sha256:8970b7166c26aea0dca49c764b44288aa71f8e6d357dd4ffd06dfe3baf027ce7
+---
+
+为了确保用户获得良好的支付体验，Payment Kit制定了相关接入规范，请开发者遵照执行，具体要求（非强制性）如下：
+
+## 支付方式呈现
+
+1. 涉及支付公司名称，请统一使用：**花瓣支付（深圳）有限公司**。
+2. 涉及支付方式说明（如涉及根据系统语言环境做国际化，也请对该支付方式说明一并做处理），请统一使用：**华为支付（中文）**、**Huawei Pay（英文）**。
+3. 华为支付提供了支付图标设计规范，以此保证用户在使用华为支付时拥有一致的支付视觉体验，有关设计规范请参阅[华为支付设计规范](https://developer.huawei.com/consumer/cn/doc/design-guides/huaweipay-0000002054558905)。
+4. 华为支付logo资源可[在此下载](https://developer.huawei.com/consumer/cn/design/resource/)。
+
+## 支付体验要求
+
+1. 建议在应用的订单页或支付页内直接拉起华为支付收银台，不建议跳转空白页拉起收银台。
+2. 商户收银台展示数字人民币支付入口时，需与其他支付App在同一层级，建议不要隐藏数字人民币支付入口或满足一定条件后才在收银台页面展示。具体参考如下：
+
+   ![](https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_scene_100_1/e1/v3/ZXq5V72gTC6XNLIcHuK3VA/zh-cn_image_0000002622858949.png?HW-CC-KV=V1&HW-CC-Date=20260611T071119Z&HW-CC-Expire=86400&HW-CC-Sign=98FE80CFD323448D77452200E7779F0CA4F553BA84FB95B24F25C27597C6B03A)

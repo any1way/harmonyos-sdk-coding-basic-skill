@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# 模型权重（可从 ModelScope/HuggingFace 重新下载）
+harmonyos-sdk-coding-basic-skill/models/
+
+# 检索索引产物（可由 build_index.py / build_dense_index.py 重建）
+harmonyos-sdk-coding-basic-skill/scripts/index/
+
+# 日志
+*.log
+
+# 临时文件
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db

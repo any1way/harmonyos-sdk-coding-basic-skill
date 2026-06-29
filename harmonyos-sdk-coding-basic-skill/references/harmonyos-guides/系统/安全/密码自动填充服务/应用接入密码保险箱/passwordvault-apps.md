@@ -1,0 +1,14 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/passwordvault-apps
+title: 应用接入密码保险箱
+breadcrumb: 指南 > 系统 > 安全 > 密码自动填充服务 > 应用接入密码保险箱
+category: harmonyos-guides
+scraped_at: 2026-06-01T11:13:20+08:00
+doc_updated_at: 2026-03-09
+content_hash: sha256:9bfd749f45a7c8f7511b74cfb46a7471a38956c436d3851ddd74509ec3455dc9
+---
+* **[快速适配](快速适配/passwordvault-quick-adaptation.md)**
+* **[自动保存](自动保存/passwordvault-autosave.md)**
+* **[自动填充](自动填充/passwordvault-autofill.md)**
+* **[自定义布局下的适配建议](自定义布局下的适配建议/passwordvault-adaptation-in-custom-layout.md)**
+* **[系统可适配的场景](系统可适配的场景/passwordvault-special-scenarios.md)**

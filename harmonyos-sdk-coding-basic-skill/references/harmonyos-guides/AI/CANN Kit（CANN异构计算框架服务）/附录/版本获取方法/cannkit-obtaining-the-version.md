@@ -1,0 +1,19 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-obtaining-the-version
+title: 版本获取方法
+breadcrumb: 指南 > AI > CANN Kit（CANN异构计算框架服务） > 附录 > 版本获取方法
+category: harmonyos-guides
+scraped_at: 2026-06-01T15:13:18+08:00
+doc_updated_at: 2026-04-20
+content_hash: sha256:37e64799b5e4f0ac4106d9aa5e0cdefa63b9f0672104993e41973153fe68b3ed
+---
+开发者可以使用以下两种方法获取CANN Kit Version版本号。
+
+* 方法1：通过hdc命令。
+
+  如果开发者的手机终端直接连接在2in1上，可以使用以下命令，获取const.hiai.vendor.hiaiversion属性。
+
+  ```
+  1. hdc shell param get const.hiai.vendor.hiaiversion
+  ```
+* 方法2：通过CANN Kit开放接口，具体请参见[HMS\_HiAI\_GetVersion](<../../../../../harmonyos-references/CANN Kit（CANN异构计算框架服务）/C API/模块/CANN/cannkit.md#hms_hiai_getversion>)。

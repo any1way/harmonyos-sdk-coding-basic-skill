@@ -1,0 +1,95 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-overview
+title: AR Engine简介
+breadcrumb: 指南 > 图形 > AR Engine（AR引擎服务） > AR Engine简介
+category: harmonyos-guides
+scraped_at: 2026-06-11T14:59:05+08:00
+doc_updated_at: 2026-04-29
+content_hash: sha256:3f814a3a28de4a4d25831282c3756d8aa48090e6b6edd2748aa548d29344f26c
+---
+AR Engine（AR引擎服务）是一个用于在HarmonyOS上构建增强现实应用的引擎，提供了运动跟踪、环境跟踪等空间计算能力。
+
+## 能力介绍
+
+AR Engine主要包含运动跟踪与平面识别特性、平面语义及物体语义特性、环境Mesh识别特性、深度估计特性、图像跟踪特性、高精几何重建特性、人脸识别与跟踪特性、人体骨骼点识别与跟踪特性。
+
+通过这些能力，应用可以实现虚拟世界与现实世界的融合，给用户提供全新的视觉体验和交互方式。
+
+### 环境识别与运动跟踪能力
+
+* [运动跟踪](../运动跟踪/运动跟踪介绍/arengine-get-pose-conversion.md)：实时获取设备位置和姿态
+* [平面识别](../平面识别/平面识别介绍/arengine-get-plane-conversion.md)：识别环境中的平面
+* [命中检测](../命中检测/命中检测介绍/arengine-arworld-conversion.md)：获取碰撞检测结果后可以在识别的平面上放置虚拟物体
+* [平面语义](../平面语义/平面语义介绍/arengine-get-semantics-conversion.md)：识别环境中的平面类型
+* [物体语义](../物体语义/物体语义介绍/arengine-get-plane-shape-conversion.md)：识别平面上的物体形状
+* [环境Mesh识别](../环境Mesh识别/环境Mesh识别介绍/arengine-get-mesh-conversion.md)：获取环境Mesh数据
+* [深度估计](../深度估计/深度估计介绍/arengine-get-depth-conversion.md)：获取环境的深度信息
+* [高精几何重建](../高精几何重建/高精几何重建介绍/arengine-get-volume-measurement-conversion.md)：输出环境中的稠密点云，识别立方体、嵌入式立方体空间
+
+### 人体骨骼识别与跟踪能力
+
+* [人体骨骼点识别与跟踪](../人体骨骼点识别与跟踪/人体骨骼点识别与跟踪介绍/arengine-body-conversion.md)：识别环境中的人体骨骼点信息
+
+### 人脸识别与跟踪能力
+
+* [人脸识别与跟踪](../人脸识别与跟踪/人脸识别与跟踪介绍/arengine-face-conversion.md)：识别环境中的人脸信息
+
+### 图像识别与跟踪能力
+
+* [图像跟踪](../图像跟踪/图像跟踪介绍/arengine-get-image-track-conversion.md)：识别环境中已预置在AR Engine中的图像并输出图像位置和姿态
+
+## 坐标系说明
+
+### AR Engine重力对齐世界坐标系
+
+* 以相机启动时相机中心为坐标原点；
+* 重力方向为Y轴，向上+Y，向下-Y；
+* 设备水平前后移动为X轴，由近及远+X，由远及近-X；
+* 设备水平左右移动为Z轴，向右+Z，向左-Z。
+
+**图12** 重力对齐世界坐标系示意图
+
+![](https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_scene_100_1/94/v3/BQh5_Dk6SqWaMipB_guQiw/zh-cn_image_0000002622698609.png?HW-CC-KV=V1&HW-CC-Date=20260611T065904Z&HW-CC-Expire=86400&HW-CC-Sign=2AE070C07136AFE52E1AD49167EF53F4638CB9382226E11A329D313840B414B1)
+
+### AR Engine重力对齐北向坐标系
+
+* 以相机启动时相机中心为坐标原点；
+* 重力方向为Y轴，向上+Y，向下-Y；
+* 指南针北向为+X轴，南向为-X轴；
+* 指南针东向为+Z轴，西向为-Z轴；
+* 重力对齐北向坐标系为固定坐标系，不受设备位姿变化影响。
+
+**图13** 重力对齐北向坐标系示意图
+
+![](https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_scene_100_1/44/v3/9qcvAc5eQECLRZ7quQcvNg/zh-cn_image_0000002592219048.png?HW-CC-KV=V1&HW-CC-Date=20260611T065904Z&HW-CC-Expire=86400&HW-CC-Sign=D5906AED23A09E751EE90D380530BCF29C6014C8BDEBC2F772CE93AB49A0064D)
+
+### AGP世界坐标系
+
+* 以相机启动时相机中心为坐标原点；
+* 设备垂直方向为Y轴，向上+Y，向下-Y；
+* 设备水平前后移动为Z轴，向前+Z，向后-Z；
+* 设备水平左右移动为X轴，向左+X，向右-X。
+
+**图14** AGP世界坐标系示意图
+
+![](https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_scene_100_1/72/v3/t2Wx5kK2T1W8TMue2o8F3w/zh-cn_image_0000002622698609.png?HW-CC-KV=V1&HW-CC-Date=20260611T065904Z&HW-CC-Expire=86400&HW-CC-Sign=3B5E3B9C0896B9BF4601C739D9031DCF06A65E32888C5EE65B7C8C9052A841BD)
+
+## 约束与限制
+
+* 在调用AR Engine能力前，需要先通过[canIUse](../../../../harmonyos-references/系统能力SystemCapability使用指南/syscap.md#使用caniuse判断syscap是否可调用)查询您的目标设备是否支持SystemCapability.AREngine.Core系统能力。
+* 支持的设备类型：Phone、Tablet。从6.1.0(23)版本开始，新增支持TV。
+* 不同设备支持的特性范围有所差异，可以通过以下方式查询设备是否支持对应的特性：
+
+  + 对于C API，使用[HMS\_AREngine\_CheckSupported](<../../../../harmonyos-references/AR Engine（AR引擎服务）/C API/模块/AR Engine/arengine-capi-arengine.md#hms_arengine_checksupported>)拓展特性查询接口进行查询。
+  + 对于ArkTS API，使用[arViewController.isARTypeSupported](<../../../../harmonyos-references/AR Engine（AR引擎服务）/ArkTS API/arViewController（AR场景管理能力）/arengine-api-arviewcontroller.md#arviewcontrollerisartypesupported>)拓展特性查询接口进行查询。
+
+  两种方式均返回对应的特性是否支持，具体使用方式参考各个特性的示例代码。
+* 支持机型的产品型号也可以参考[社区问答贴](https://developer.huawei.com/consumer/cn/forum/topic/0204192741933553355?fid=0104164651529951067)。
+
+## 支持的国家/地区
+
+本Kit当前仅支持在中国境内（香港特别行政区、澳门特别行政区、中国台湾除外）接入使用。
+
+## 模拟器支持情况
+
+本Kit暂不支持模拟器。

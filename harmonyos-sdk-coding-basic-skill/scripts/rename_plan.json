@@ -1,0 +1,2529 @@
+{
+  "threshold": 50,
+  "total_files": 12242,
+  "long_files_count": 39,
+  "rename_count": 39,
+  "unmatched_count": 0,
+  "conflicts_count": 0,
+  "still_long_count": 0,
+  "referenced_count": 39,
+  "total_link_edits": 347,
+  "renames": [
+    {
+      "old_path": "harmonyos-guides\\应用服务\\Notification Kit（用户通知服务）\\通知订阅扩展能力\\通知订阅扩展能力开发步骤\\notification-subscriber-extension-ability-development-steps.md",
+      "new_path": "harmonyos-guides\\应用服务\\Notification Kit（用户通知服务）\\通知订阅扩展能力\\通知订阅扩展能力开发步骤\\notification-subscriber-ext-ability-steps.md",
+      "rule": "N:notif-ext-steps",
+      "old_len": 59,
+      "new_len": 41,
+      "referenced": true,
+      "ref_count": 2
+    },
+    {
+      "old_path": "harmonyos-guides\\NDK开发\\代码开发\\使用JSVM-API实现JS与CC++语言交互\\JSVM-API使用指导\\使用JSVM-API接口进行JavaScript代码调试调优\\use-jsvm-heapstatistics-debugger-cpuprofiler-heapsnapshot.md",
+      "new_path": "harmonyos-guides\\NDK开发\\代码开发\\使用JSVM-API实现JS与CC++语言交互\\JSVM-API使用指导\\使用JSVM-API接口进行JavaScript代码调试调优\\use-jsvm-debugger-cpuprofiler-heapsnapshot.md",
+      "rule": "O:jsvm-debugger",
+      "old_len": 57,
+      "new_len": 42,
+      "referenced": true,
+      "ref_count": 2
+    },
+    {
+      "old_path": "harmonyos-guides\\系统\\安全\\Crypto Architecture Kit（加解密算法框架服务）\\密钥生成和转换\\密钥生成和转换开发指导\\使用ECC压缩非压缩公钥格式转换(CC++)\\crypto-convert-compressed-or-uncompressed-ecc-pubkey-ndk.md",
+      "new_path": "harmonyos-guides\\系统\\安全\\Crypto Architecture Kit（加解密算法框架服务）\\密钥生成和转换\\密钥生成和转换开发指导\\使用ECC压缩非压缩公钥格式转换(CC++)\\crypto-convert-ecc-pubkey-ndk.md",
+      "rule": "P:crypto-ecc",
+      "old_len": 56,
+      "new_len": 29,
+      "referenced": true,
+      "ref_count": 1
+    },
+    {
+      "old_path": "harmonyos-guides\\应用框架\\Form Kit（卡片开发服务）\\ArkTS卡片开发（推荐）\\ArkTS卡片提供方开发指导\\ArkTS卡片编辑\\ArkTS卡片编辑概述\\arkts-ui-widget-event-formeditextensionability-overview.md",
+      "new_path": "harmonyos-guides\\应用框架\\Form Kit（卡片开发服务）\\ArkTS卡片开发（推荐）\\ArkTS卡片提供方开发指导\\ArkTS卡片编辑\\ArkTS卡片编辑概述\\arkts-widget-event-formedit-overview.md",
+      "rule": "Q:arkts-widget",
+      "old_len": 55,
+      "new_len": 36,
+      "referenced": true,
+      "ref_count": 3
+    },
+    {
+      "old_path": "harmonyos-guides\\系统\\安全\\Crypto Architecture Kit（加解密算法框架服务）\\密钥生成和转换\\密钥生成和转换开发指导\\使用ECC压缩非压缩点格式转换(CC++)\\crypto-convert-compressed-or-uncompressed-ecc-point-ndk.md",
+      "new_path": "harmonyos-guides\\系统\\安全\\Crypto Architecture Kit（加解密算法框架服务）\\密钥生成和转换\\密钥生成和转换开发指导\\使用ECC压缩非压缩点格式转换(CC++)\\crypto-convert-ecc-point-ndk.md",
+      "rule": "P:crypto-ecc",
+      "old_len": 55,
+      "new_len": 28,
+      "referenced": true,
+      "ref_count": 1
+    },
+    {
+      "old_path": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+      "new_path": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-app-accessibilityextensioncontext.md",
+      "rule": "R:js-apis-app",
+      "old_len": 55,
+      "new_len": 41,
+      "referenced": true,
+      "ref_count": 52
+    },
+    {
+      "old_path": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\结构体\\OH_CryptoAsymKeyGeneratorWithSpec\\capi-cryptoasymkeyapi-oh-cryptoasymkeygeneratorwithspec.md",
+      "new_path": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\结构体\\OH_CryptoAsymKeyGeneratorWithSpec\\capi-crypto-oh-cryptoasymkeygeneratorwithspec.md",
+      "rule": "T:capi-crypto",
+      "old_len": 55,
+      "new_len": 45,
+      "referenced": true,
+      "ref_count": 6
+    },
+    {
+      "old_path": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\NotificationExtensionContent\\js-apis-inner-notification-notificationextensioncontent.md",
+      "new_path": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\NotificationExtensionContent\\js-apis-notif-notificationextensioncontent.md",
+      "rule": "S:js-apis-notif",
+      "old_len": 55,
+      "new_len": 42,
+      "referenced": true,
+      "ref_count": 3
+    },
+    {
+      "old_path": "harmonyos-references\\附录\\NDK涉及的musl libc接口使用限制的说明\\guidance-on-ndk-libc-interfaces-affected-by-permissions.md",
+      "new_path": "harmonyos-references\\附录\\NDK涉及的musl libc接口使用限制的说明\\guidance-ndk-libc-permissions.md",
+      "rule": "U:guidance-ndk",
+      "old_len": 55,
+      "new_len": 29,
+      "referenced": true,
+      "ref_count": 3
+    },
+    {
+      "old_path": "harmonyos-references\\Ability Kit（程序框架服务）\\C API\\结构体\\OH_NativeBundle_AbilityResourceInfo\\capi-native-bundle-oh-nativebundle-abilityresourceinfo.md",
+      "new_path": "harmonyos-references\\Ability Kit（程序框架服务）\\C API\\结构体\\OH_NativeBundle_AbilityResourceInfo\\capi-native-bundle-abilityresourceinfo.md",
+      "rule": "V:native-bundle",
+      "old_len": 54,
+      "new_len": 38,
+      "referenced": true,
+      "ref_count": 7
+    },
+    {
+      "old_path": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_DrawableDescriptor_AnimationController\\capi-arkui-arkui-drawabledescriptoranimationcontroller.md",
+      "new_path": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_DrawableDescriptor_AnimationController\\capi-arkui-drawabledescriptoranimationcontroller.md",
+      "rule": "S1:去重arkui",
+      "old_len": 54,
+      "new_len": 48,
+      "referenced": true,
+      "ref_count": 10
+    },
+    {
+      "old_path": "harmonyos-references\\ArkWeb（方舟Web）\\ArkTS 组件\\Web\\Class (ClientAuthenticationHandler)\\arkts-basic-components-web-clientauthenticationhandler.md",
+      "new_path": "harmonyos-references\\ArkWeb（方舟Web）\\ArkTS 组件\\Web\\Class (ClientAuthenticationHandler)\\arkts-web-clientauthenticationhandler.md",
+      "rule": "W:arkts-web",
+      "old_len": 54,
+      "new_len": 37,
+      "referenced": true,
+      "ref_count": 7
+    },
+    {
+      "old_path": "harmonyos-references\\Vulkan\\Vulkan扩展能力\\VkPhysicalDevicePresentationPropertiesOHOS\\capi-vulkan-vkphysicaldevicepresentationpropertiesohos.md",
+      "new_path": "harmonyos-references\\Vulkan\\Vulkan扩展能力\\VkPhysicalDevicePresentationPropertiesOHOS\\capi-vulkan-vkphysicaldevicepresentationpropsohos.md",
+      "rule": "X:vulkan-props",
+      "old_len": 54,
+      "new_len": 49,
+      "referenced": true,
+      "ref_count": 3
+    },
+    {
+      "old_path": "harmonyos-guides\\应用框架\\UI Design Kit（UI设计套件）\\视效\\自带背景的双边流光\\ui-design-visual-effect-background-streamer-with-mask.md",
+      "new_path": "harmonyos-guides\\应用框架\\UI Design Kit（UI设计套件）\\视效\\自带背景的双边流光\\ui-design-bg-streamer-with-mask.md",
+      "rule": "Y:ui-design-bg",
+      "old_len": 53,
+      "new_len": 31,
+      "referenced": true,
+      "ref_count": 2
+    },
+    {
+      "old_path": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\通用属性\\动态属性与自定义\\动态SymbolGlyphModifier属性设置\\ts-universal-attributes-attribute-symbolglyphmodifier.md",
+      "new_path": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\通用属性\\动态属性与自定义\\动态SymbolGlyphModifier属性设置\\ts-attr-symbolglyphmodifier.md",
+      "rule": "Z:ts-attr",
+      "old_len": 53,
+      "new_len": 27,
+      "referenced": true,
+      "ref_count": 53
+    },
+    {
+      "old_path": "harmonyos-references\\Enterprise Threat Protection Kit（企业威胁防护服务）\\ArkTS API\\virusRemediation（文件访问与处置）\\enterprisethreatprotection-virusremediation-interface.md",
+      "new_path": "harmonyos-references\\Enterprise Threat Protection Kit（企业威胁防护服务）\\ArkTS API\\virusRemediation（文件访问与处置）\\etp-virusremediation-interface.md",
+      "rule": "AA:etp-vr",
+      "old_len": 53,
+      "new_len": 30,
+      "referenced": true,
+      "ref_count": 23
+    },
+    {
+      "old_path": "harmonyos-guides\\系统\\安全\\Crypto Architecture Kit（加解密算法框架服务）\\密钥生成和转换\\密钥生成和转换开发指导\\使用ECC压缩非压缩公钥格式转换(ArkTS)\\crypto-convert-compressed-or-uncompressed-ecc-pubkey.md",
+      "new_path": "harmonyos-guides\\系统\\安全\\Crypto Architecture Kit（加解密算法框架服务）\\密钥生成和转换\\密钥生成和转换开发指导\\使用ECC压缩非压缩公钥格式转换(ArkTS)\\crypto-convert-ecc-pubkey.md",
+      "rule": "P:crypto-ecc",
+      "old_len": 52,
+      "new_len": 25,
+      "referenced": true,
+      "ref_count": 1
+    },
+    {
+      "old_path": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\Enterprise Threat Protection Kit常见问题\\enterprisethreatprotection-virusremediation-question.md",
+      "new_path": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\Enterprise Threat Protection Kit常见问题\\etp-virusremediation-question.md",
+      "rule": "AA:etp-vr",
+      "old_len": 52,
+      "new_len": 29,
+      "referenced": true,
+      "ref_count": 2
+    },
+    {
+      "old_path": "harmonyos-guides\\系统\\安全\\Universal Keystore Kit（密钥管理服务）\\外部密钥管理扩展\\Provider管理\\注册注销Provider(ArkTS)\\huks-extension-registration-and-unregistration-arkts.md",
+      "new_path": "harmonyos-guides\\系统\\安全\\Universal Keystore Kit（密钥管理服务）\\外部密钥管理扩展\\Provider管理\\注册注销Provider(ArkTS)\\huks-ext-reg-unreg-arkts.md",
+      "rule": "AB:huks-ext",
+      "old_len": 52,
+      "new_len": 24,
+      "referenced": true,
+      "ref_count": 1
+    },
+    {
+      "old_path": "harmonyos-references\\Ability Kit（程序框架服务）\\ArkTS API\\接口依赖的元素及定义\\application\\EmbeddableUIAbilityContext\\js-apis-inner-application-embeddableuiabilitycontext.md",
+      "new_path": "harmonyos-references\\Ability Kit（程序框架服务）\\ArkTS API\\接口依赖的元素及定义\\application\\EmbeddableUIAbilityContext\\js-apis-app-embeddableuiabilitycontext.md",
+      "rule": "R:js-apis-app",
+      "old_len": 52,
+      "new_len": 38,
+      "referenced": true,
+      "ref_count": 4
+    },
+    {
+      "old_path": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_AccessibilityProviderCallbacks\\capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md",
+      "new_path": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_AccessibilityProviderCallbacks\\capi-arkui-a11y-arkui-providercallbacks.md",
+      "rule": "S6:providercallbacks",
+      "old_len": 52,
+      "new_len": 39,
+      "referenced": true,
+      "ref_count": 12
+    },
+    {
+      "old_path": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\OH_ArkUI_TextEditorStyledStringController\\capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+      "new_path": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\OH_ArkUI_TextEditorStyledStringController\\capi-arkui-texteditorstyledstringcontroller.md",
+      "rule": "S2:去重oh-arkui",
+      "old_len": 52,
+      "new_len": 43,
+      "referenced": true,
+      "ref_count": 39
+    },
+    {
+      "old_path": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\结构体\\OH_CryptoPrivKeyEncodingParams\\capi-cryptoasymkeyapi-oh-cryptoprivkeyencodingparams.md",
+      "new_path": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\结构体\\OH_CryptoPrivKeyEncodingParams\\capi-crypto-oh-cryptoprivkeyencodingparams.md",
+      "rule": "T:capi-crypto",
+      "old_len": 52,
+      "new_len": 42,
+      "referenced": true,
+      "ref_count": 7
+    },
+    {
+      "old_path": "harmonyos-guides\\应用框架\\ArkUI（方舟UI框架）\\UI开发 (ArkTS声明式开发范式)\\添加交互响应\\添加手势响应\\arkts-interaction-development-guide-support-gesture.md",
+      "new_path": "harmonyos-guides\\应用框架\\ArkUI（方舟UI框架）\\UI开发 (ArkTS声明式开发范式)\\添加交互响应\\添加手势响应\\arkts-interaction-support-gesture.md",
+      "rule": "AI:arkts-interaction",
+      "old_len": 51,
+      "new_len": 33,
+      "referenced": true,
+      "ref_count": 4
+    },
+    {
+      "old_path": "harmonyos-guides\\应用框架\\ArkUI（方舟UI框架）\\UI开发 (ArkTS声明式开发范式)\\添加交互响应\\输入设备与事件\\arkts-interaction-development-guide-raw-input-event.md",
+      "new_path": "harmonyos-guides\\应用框架\\ArkUI（方舟UI框架）\\UI开发 (ArkTS声明式开发范式)\\添加交互响应\\输入设备与事件\\arkts-interaction-raw-input-event.md",
+      "rule": "AI:arkts-interaction",
+      "old_len": 51,
+      "new_len": 33,
+      "referenced": true,
+      "ref_count": 4
+    },
+    {
+      "old_path": "harmonyos-guides\\系统\\安全\\Crypto Architecture Kit（加解密算法框架服务）\\密钥生成和转换\\密钥生成和转换开发指导\\使用ECC压缩非压缩点格式转换(ArkTS)\\crypto-convert-compressed-or-uncompressed-ecc-point.md",
+      "new_path": "harmonyos-guides\\系统\\安全\\Crypto Architecture Kit（加解密算法框架服务）\\密钥生成和转换\\密钥生成和转换开发指导\\使用ECC压缩非压缩点格式转换(ArkTS)\\crypto-convert-ecc-point.md",
+      "rule": "P:crypto-ecc",
+      "old_len": 51,
+      "new_len": 24,
+      "referenced": true,
+      "ref_count": 1
+    },
+    {
+      "old_path": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\enterprisethreatprotection-virusremediation-content.md",
+      "new_path": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\etp-virusremediation-content.md",
+      "rule": "AA:etp-vr",
+      "old_len": 51,
+      "new_len": 28,
+      "referenced": true,
+      "ref_count": 2
+    },
+    {
+      "old_path": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离\\enterprisethreatprotection-virusremediation-isolate.md",
+      "new_path": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离\\etp-virusremediation-isolate.md",
+      "rule": "AA:etp-vr",
+      "old_len": 51,
+      "new_len": 28,
+      "referenced": true,
+      "ref_count": 2
+    },
+    {
+      "old_path": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离恢复\\enterprisethreatprotection-virusremediation-restore.md",
+      "new_path": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离恢复\\etp-virusremediation-restore.md",
+      "rule": "AA:etp-vr",
+      "old_len": 51,
+      "new_len": 28,
+      "referenced": true,
+      "ref_count": 2
+    },
+    {
+      "old_path": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_TextCascadePickerRangeContentArray\\capi-arkui-arkui-textcascadepickerrangecontentarray.md",
+      "new_path": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_TextCascadePickerRangeContentArray\\capi-arkui-textcascadepickerrangecontentarray.md",
+      "rule": "S1:去重arkui",
+      "old_len": 51,
+      "new_len": 45,
+      "referenced": true,
+      "ref_count": 9
+    },
+    {
+      "old_path": "harmonyos-references\\C API\\结构体\\JSVM_PropertyHandlerConfigurationStruct\\capi-jsvm-jsvm-propertyhandlerconfigurationstruct8h.md",
+      "new_path": "harmonyos-references\\C API\\结构体\\JSVM_PropertyHandlerConfigurationStruct\\capi-jsvm-propertyhandlerconfigurationstruct8h.md",
+      "rule": "AC:jsvm",
+      "old_len": 51,
+      "new_len": 46,
+      "referenced": true,
+      "ref_count": 5
+    },
+    {
+      "old_path": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\结构体\\OH_CryptoSm2CiphertextSpec\\capi-cryptoasymcipherapi-oh-cryptosm2ciphertextspec.md",
+      "new_path": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\结构体\\OH_CryptoSm2CiphertextSpec\\capi-crypto-oh-cryptosm2ciphertextspec.md",
+      "rule": "T:capi-crypto",
+      "old_len": 51,
+      "new_len": 38,
+      "referenced": true,
+      "ref_count": 8
+    },
+    {
+      "old_path": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\结构体\\ImageProcessing_ColorSpaceInfo\\capi-imageprocessing-imageprocessing-colorspaceinfo.md",
+      "new_path": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\结构体\\ImageProcessing_ColorSpaceInfo\\capi-imgproc-colorspaceinfo.md",
+      "rule": "AD:imgproc",
+      "old_len": 51,
+      "new_len": 27,
+      "referenced": true,
+      "ref_count": 12
+    },
+    {
+      "old_path": "harmonyos-references\\MDM Kit（企业设备管理服务）\\ArkTS API\\application\\EnterpriseAdminExtensionContext\\js-apis-application-enterpriseadminextensioncontext.md",
+      "new_path": "harmonyos-references\\MDM Kit（企业设备管理服务）\\ArkTS API\\application\\EnterpriseAdminExtensionContext\\js-apis-app-enterpriseadminextctx.md",
+      "rule": "AE:entadmin",
+      "old_len": 51,
+      "new_len": 33,
+      "referenced": true,
+      "ref_count": 3
+    },
+    {
+      "old_path": "harmonyos-references\\Media Kit（媒体服务）\\C API\\结构体\\OH_LowPowerAudioSinkCallback\\capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+      "new_path": "harmonyos-references\\Media Kit（媒体服务）\\C API\\结构体\\OH_LowPowerAudioSinkCallback\\capi-lowpoweraudiosink-callback.md",
+      "rule": "AF:lowpower-cb",
+      "old_len": 51,
+      "new_len": 31,
+      "referenced": true,
+      "ref_count": 14
+    },
+    {
+      "old_path": "harmonyos-references\\Media Kit（媒体服务）\\C API\\结构体\\OH_LowPowerVideoSinkCallback\\capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+      "new_path": "harmonyos-references\\Media Kit（媒体服务）\\C API\\结构体\\OH_LowPowerVideoSinkCallback\\capi-lowpowervideosink-callback.md",
+      "rule": "AF:lowpower-cb",
+      "old_len": 51,
+      "new_len": 31,
+      "referenced": true,
+      "ref_count": 24
+    },
+    {
+      "old_path": "harmonyos-references\\Media Kit（媒体服务）\\C API\\结构体\\VideoProcessing_ColorSpaceInfo\\capi-videoprocessing-videoprocessing-colorspaceinfo.md",
+      "new_path": "harmonyos-references\\Media Kit（媒体服务）\\C API\\结构体\\VideoProcessing_ColorSpaceInfo\\capi-videoproc-colorspaceinfo.md",
+      "rule": "AG:videoproc",
+      "old_len": 51,
+      "new_len": 29,
+      "referenced": true,
+      "ref_count": 6
+    },
+    {
+      "old_path": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\NotificationActionButton\\js-apis-inner-notification-notificationactionbutton.md",
+      "new_path": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\NotificationActionButton\\js-apis-notif-notificationactionbutton.md",
+      "rule": "S:js-apis-notif",
+      "old_len": 51,
+      "new_len": 38,
+      "referenced": true,
+      "ref_count": 4
+    },
+    {
+      "old_path": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\NotificationExtensionSubscriptionInfo\\js-apis-inner-notificationextensionsubscriptioninfo.md",
+      "new_path": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\NotificationExtensionSubscriptionInfo\\js-apis-notif-extsubinfo.md",
+      "rule": "AH:notif-extsub",
+      "old_len": 51,
+      "new_len": 24,
+      "referenced": true,
+      "ref_count": 3
+    }
+  ],
+  "unmatched": [],
+  "conflicts": [],
+  "still_long": [],
+  "link_references": {
+    "harmonyos-guides\\NDK开发\\代码开发\\使用JSVM-API实现JS与CC++语言交互\\JSVM-API使用指导\\使用JSVM-API接口进行JavaScript代码调试调优\\use-jsvm-heapstatistics-debugger-cpuprofiler-heapsnapshot.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 229,
+        "url": "NDK开发/代码开发/使用JSVM-API实现JS与CC++语言交互/JSVM-API使用指导/使用JSVM-API接口进行JavaScript代码调试调优/use-jsvm-heapstatistics-debugger-cpuprofiler-heapsnapshot.md",
+        "text": "使用JSVM-API接口进行JavaScript代码调试调优"
+      },
+      {
+        "from": "harmonyos-guides\\NDK开发\\代码开发\\使用JSVM-API实现JS与CC++语言交互\\JSVM-API使用指导\\jsvm-use.md",
+        "line": 28,
+        "url": "使用JSVM-API接口进行JavaScript代码调试调优/use-jsvm-heapstatistics-debugger-cpuprofiler-heapsnapshot.md",
+        "text": "使用JSVM-API接口进行JavaScript代码调试调优"
+      }
+    ],
+    "harmonyos-guides\\应用服务\\Notification Kit（用户通知服务）\\通知订阅扩展能力\\通知订阅扩展能力开发步骤\\notification-subscriber-extension-ability-development-steps.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 1623,
+        "url": "<应用服务/Notification Kit（用户通知服务）/通知订阅扩展能力/通知订阅扩展能力开发步骤/notification-subscriber-extension-ability-development-steps.md>",
+        "text": "通知订阅扩展能力开发步骤"
+      },
+      {
+        "from": "harmonyos-guides\\应用服务\\Notification Kit（用户通知服务）\\通知订阅扩展能力\\notification-subscriber-extension.md",
+        "line": 11,
+        "url": "通知订阅扩展能力开发步骤/notification-subscriber-extension-ability-development-steps.md",
+        "text": "通知订阅扩展能力开发步骤"
+      }
+    ],
+    "harmonyos-guides\\应用框架\\ArkUI（方舟UI框架）\\UI开发 (ArkTS声明式开发范式)\\添加交互响应\\添加手势响应\\arkts-interaction-development-guide-support-gesture.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 2418,
+        "url": "<应用框架/ArkUI（方舟UI框架）/UI开发 (ArkTS声明式开发范式)/添加交互响应/添加手势响应/arkts-interaction-development-guide-support-gesture.md>",
+        "text": "添加手势响应"
+      },
+      {
+        "from": "harmonyos-guides\\应用框架\\ArkUI（方舟UI框架）\\UI开发 (ArkTS声明式开发范式)\\UI开发（ArkTS声明式开发范式）概述\\arkts-ui-development-overview.md",
+        "line": 90,
+        "url": "../添加交互响应/添加手势响应/arkts-interaction-development-guide-support-gesture.md",
+        "text": "手势响应"
+      },
+      {
+        "from": "harmonyos-guides\\应用框架\\ArkUI（方舟UI框架）\\UI开发 (ArkTS声明式开发范式)\\添加交互响应\\arkts-interaction-development-guide-overview.md",
+        "line": 18,
+        "url": "添加手势响应/arkts-interaction-development-guide-support-gesture.md",
+        "text": "添加手势响应"
+      },
+      {
+        "from": "harmonyos-guides\\应用框架\\ArkUI（方舟UI框架）\\UI开发 (ArkTS声明式开发范式)\\添加交互响应\\arkts-interaction-development-guide-overview.md",
+        "line": 33,
+        "url": "添加手势响应/arkts-interaction-development-guide-support-gesture.md",
+        "text": "添加手势响应"
+      }
+    ],
+    "harmonyos-guides\\应用框架\\ArkUI（方舟UI框架）\\UI开发 (ArkTS声明式开发范式)\\添加交互响应\\输入设备与事件\\arkts-interaction-development-guide-raw-input-event.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 2419,
+        "url": "<应用框架/ArkUI（方舟UI框架）/UI开发 (ArkTS声明式开发范式)/添加交互响应/输入设备与事件/arkts-interaction-development-guide-raw-input-event.md>",
+        "text": "输入设备与事件"
+      },
+      {
+        "from": "harmonyos-guides\\应用框架\\ArkUI（方舟UI框架）\\UI开发 (ArkTS声明式开发范式)\\UI开发（ArkTS声明式开发范式）概述\\arkts-ui-development-overview.md",
+        "line": 90,
+        "url": "../添加交互响应/输入设备与事件/arkts-interaction-development-guide-raw-input-event.md",
+        "text": "输入设备与事件"
+      },
+      {
+        "from": "harmonyos-guides\\应用框架\\ArkUI（方舟UI框架）\\UI开发 (ArkTS声明式开发范式)\\添加交互响应\\arkts-interaction-development-guide-overview.md",
+        "line": 16,
+        "url": "输入设备与事件/arkts-interaction-development-guide-raw-input-event.md",
+        "text": "输入设备与事件"
+      },
+      {
+        "from": "harmonyos-guides\\应用框架\\ArkUI（方舟UI框架）\\UI开发 (ArkTS声明式开发范式)\\添加交互响应\\arkts-interaction-development-guide-overview.md",
+        "line": 32,
+        "url": "输入设备与事件/arkts-interaction-development-guide-raw-input-event.md",
+        "text": "输入设备与事件"
+      }
+    ],
+    "harmonyos-guides\\应用框架\\Form Kit（卡片开发服务）\\ArkTS卡片开发（推荐）\\ArkTS卡片提供方开发指导\\ArkTS卡片编辑\\ArkTS卡片编辑概述\\arkts-ui-widget-event-formeditextensionability-overview.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 2718,
+        "url": "<应用框架/Form Kit（卡片开发服务）/ArkTS卡片开发（推荐）/ArkTS卡片提供方开发指导/ArkTS卡片编辑/ArkTS卡片编辑概述/arkts-ui-widget-event-formeditextensionability-overview.md>",
+        "text": "ArkTS卡片编辑概述"
+      },
+      {
+        "from": "harmonyos-guides\\应用框架\\Form Kit（卡片开发服务）\\ArkTS卡片开发（推荐）\\ArkTS卡片提供方开发指导\\ArkTS卡片编辑\\arkts-ui-widget-edit.md",
+        "line": 10,
+        "url": "ArkTS卡片编辑概述/arkts-ui-widget-event-formeditextensionability-overview.md",
+        "text": "ArkTS卡片编辑概述"
+      },
+      {
+        "from": "harmonyos-references\\Form Kit（卡片开发服务）\\错误码\\卡片错误码\\errorcode-form.md",
+        "line": 286,
+        "url": "<../../../../harmonyos-guides/应用框架/Form Kit（卡片开发服务）/ArkTS卡片开发（推荐）/ArkTS卡片提供方开发指导/ArkTS卡片编辑/ArkTS卡片编辑概述/arkts-ui-widget-event-formeditextensionability-overview.md#半模态卡片编辑>",
+        "text": "半模态卡片编辑页"
+      }
+    ],
+    "harmonyos-guides\\应用框架\\UI Design Kit（UI设计套件）\\视效\\自带背景的双边流光\\ui-design-visual-effect-background-streamer-with-mask.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 2850,
+        "url": "<应用框架/UI Design Kit（UI设计套件）/视效/自带背景的双边流光/ui-design-visual-effect-background-streamer-with-mask.md>",
+        "text": "自带背景的双边流光"
+      },
+      {
+        "from": "harmonyos-guides\\应用框架\\UI Design Kit（UI设计套件）\\视效\\ui-design-visual-effect.md",
+        "line": 14,
+        "url": "自带背景的双边流光/ui-design-visual-effect-background-streamer-with-mask.md",
+        "text": "自带背景的双边流光"
+      }
+    ],
+    "harmonyos-guides\\系统\\安全\\Crypto Architecture Kit（加解密算法框架服务）\\密钥生成和转换\\密钥生成和转换开发指导\\使用ECC压缩非压缩公钥格式转换(ArkTS)\\crypto-convert-compressed-or-uncompressed-ecc-pubkey.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 3129,
+        "url": "<系统/安全/Crypto Architecture Kit（加解密算法框架服务）/密钥生成和转换/密钥生成和转换开发指导/使用ECC压缩非压缩公钥格式转换(ArkTS)/crypto-convert-compressed-or-uncompressed-ecc-pubkey.md>",
+        "text": "使用ECC压缩/非压缩公钥格式转换(ArkTS)"
+      }
+    ],
+    "harmonyos-guides\\系统\\安全\\Crypto Architecture Kit（加解密算法框架服务）\\密钥生成和转换\\密钥生成和转换开发指导\\使用ECC压缩非压缩公钥格式转换(CC++)\\crypto-convert-compressed-or-uncompressed-ecc-pubkey-ndk.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 3130,
+        "url": "<系统/安全/Crypto Architecture Kit（加解密算法框架服务）/密钥生成和转换/密钥生成和转换开发指导/使用ECC压缩非压缩公钥格式转换(CC++)/crypto-convert-compressed-or-uncompressed-ecc-pubkey-ndk.md>",
+        "text": "使用ECC压缩/非压缩公钥格式转换(C/C++)"
+      }
+    ],
+    "harmonyos-guides\\系统\\安全\\Crypto Architecture Kit（加解密算法框架服务）\\密钥生成和转换\\密钥生成和转换开发指导\\使用ECC压缩非压缩点格式转换(ArkTS)\\crypto-convert-compressed-or-uncompressed-ecc-point.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 3131,
+        "url": "<系统/安全/Crypto Architecture Kit（加解密算法框架服务）/密钥生成和转换/密钥生成和转换开发指导/使用ECC压缩非压缩点格式转换(ArkTS)/crypto-convert-compressed-or-uncompressed-ecc-point.md>",
+        "text": "使用ECC压缩/非压缩点格式转换(ArkTS)"
+      }
+    ],
+    "harmonyos-guides\\系统\\安全\\Crypto Architecture Kit（加解密算法框架服务）\\密钥生成和转换\\密钥生成和转换开发指导\\使用ECC压缩非压缩点格式转换(CC++)\\crypto-convert-compressed-or-uncompressed-ecc-point-ndk.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 3132,
+        "url": "<系统/安全/Crypto Architecture Kit（加解密算法框架服务）/密钥生成和转换/密钥生成和转换开发指导/使用ECC压缩非压缩点格式转换(CC++)/crypto-convert-compressed-or-uncompressed-ecc-point-ndk.md>",
+        "text": "使用ECC压缩/非压缩点格式转换(C/C++)"
+      }
+    ],
+    "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\Enterprise Threat Protection Kit常见问题\\enterprisethreatprotection-virusremediation-question.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 3299,
+        "url": "<系统/安全/Enterprise Threat Protection Kit（企业威胁防护服务）/Enterprise Threat Protection Kit常见问题/enterprisethreatprotection-virusremediation-question.md>",
+        "text": "Enterprise Threat Protection Kit常见问题"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\enterprise-threat-protection-kit-guide.md",
+        "line": 13,
+        "url": "<Enterprise Threat Protection Kit常见问题/enterprisethreatprotection-virusremediation-question.md>",
+        "text": "Enterprise Threat Protection Kit常见问题"
+      }
+    ],
+    "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\enterprisethreatprotection-virusremediation-content.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 3303,
+        "url": "<系统/安全/Enterprise Threat Protection Kit（企业威胁防护服务）/文件访问与处置/enterprisethreatprotection-virusremediation-content.md>",
+        "text": "文件访问与处置"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\enterprise-threat-protection-kit-guide.md",
+        "line": 12,
+        "url": "文件访问与处置/enterprisethreatprotection-virusremediation-content.md",
+        "text": "文件访问与处置"
+      }
+    ],
+    "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离\\enterprisethreatprotection-virusremediation-isolate.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 3306,
+        "url": "<系统/安全/Enterprise Threat Protection Kit（企业威胁防护服务）/文件访问与处置/文件隔离/enterprisethreatprotection-virusremediation-isolate.md>",
+        "text": "文件隔离"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\enterprisethreatprotection-virusremediation-content.md",
+        "line": 12,
+        "url": "文件隔离/enterprisethreatprotection-virusremediation-isolate.md",
+        "text": "文件隔离"
+      }
+    ],
+    "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离恢复\\enterprisethreatprotection-virusremediation-restore.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 3308,
+        "url": "<系统/安全/Enterprise Threat Protection Kit（企业威胁防护服务）/文件访问与处置/文件隔离恢复/enterprisethreatprotection-virusremediation-restore.md>",
+        "text": "文件隔离恢复"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\enterprisethreatprotection-virusremediation-content.md",
+        "line": 13,
+        "url": "文件隔离恢复/enterprisethreatprotection-virusremediation-restore.md",
+        "text": "文件隔离恢复"
+      }
+    ],
+    "harmonyos-guides\\系统\\安全\\Universal Keystore Kit（密钥管理服务）\\外部密钥管理扩展\\Provider管理\\注册注销Provider(ArkTS)\\huks-extension-registration-and-unregistration-arkts.md": [
+      {
+        "from": "harmonyos-guides\\INDEX.md",
+        "line": 3326,
+        "url": "<系统/安全/Universal Keystore Kit（密钥管理服务）/外部密钥管理扩展/Provider管理/注册注销Provider(ArkTS)/huks-extension-registration-and-unregistration-arkts.md>",
+        "text": "注册/注销Provider(ArkTS)"
+      }
+    ],
+    "harmonyos-references\\Enterprise Threat Protection Kit（企业威胁防护服务）\\ArkTS API\\virusRemediation（文件访问与处置）\\enterprisethreatprotection-virusremediation-interface.md": [
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\启动应用目录文件扫描任务\\enterprisethreatprotection-virusremediation-scan.md",
+        "line": 20,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#scanbundlefiles>",
+        "text": "接口文档"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\启动应用目录文件扫描任务\\enterprisethreatprotection-virusremediation-scan.md",
+        "line": 24,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#scantargettype>",
+        "text": "ScanTargetType"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\启动应用目录文件扫描任务\\enterprisethreatprotection-virusremediation-scan.md",
+        "line": 24,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#scancallback>",
+        "text": "ScanCallback"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\启动应用目录文件扫描任务\\enterprisethreatprotection-virusremediation-scan.md",
+        "line": 33,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#scanbundlefiles>",
+        "text": "scanBundleFiles"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\打开文件\\enterprisethreatprotection-virusremediation-open.md",
+        "line": 20,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#openfile>",
+        "text": "接口文档"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\打开文件\\enterprisethreatprotection-virusremediation-open.md",
+        "line": 35,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#openfile>",
+        "text": "openFile"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离\\enterprisethreatprotection-virusremediation-isolate.md",
+        "line": 20,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#isolatethreatfile>",
+        "text": "接口文档"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离\\enterprisethreatprotection-virusremediation-isolate.md",
+        "line": 33,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#isolatethreatfile>",
+        "text": "isolateThreatFile"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离删除\\enterprisethreatprotection-virusremediation-remove.md",
+        "line": 22,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#removeisolatedfile>",
+        "text": "接口文档"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离删除\\enterprisethreatprotection-virusremediation-remove.md",
+        "line": 35,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#removeisolatedfile>",
+        "text": "removeIsolatedFile"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离删除\\enterprisethreatprotection-virusremediation-remove.md",
+        "line": 35,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#queryisolatedfiles>",
+        "text": "queryIsolatedFiles"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离恢复\\enterprisethreatprotection-virusremediation-restore.md",
+        "line": 20,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#restoreisolatedfile>",
+        "text": "接口文档"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离恢复\\enterprisethreatprotection-virusremediation-restore.md",
+        "line": 33,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#restoreisolatedfile>",
+        "text": "restoreIsolatedFile"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\文件隔离恢复\\enterprisethreatprotection-virusremediation-restore.md",
+        "line": 33,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#queryisolatedfiles>",
+        "text": "queryIsolatedFiles"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\隔离查询\\enterprisethreatprotection-virusremediation-query.md",
+        "line": 20,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#queryisolatedfiles>",
+        "text": "接口文档"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\隔离查询\\enterprisethreatprotection-virusremediation-query.md",
+        "line": 24,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#querycallback>",
+        "text": "QueryCallback"
+      },
+      {
+        "from": "harmonyos-guides\\系统\\安全\\Enterprise Threat Protection Kit（企业威胁防护服务）\\文件访问与处置\\隔离查询\\enterprisethreatprotection-virusremediation-query.md",
+        "line": 33,
+        "url": "<../../../../../../harmonyos-references/Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md#queryisolatedfiles>",
+        "text": "queryIsolatedFiles"
+      },
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 2532,
+        "url": "<Enterprise Threat Protection Kit（企业威胁防护服务）/ArkTS API/virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md>",
+        "text": "virusRemediation（文件访问与处置）"
+      },
+      {
+        "from": "harmonyos-references\\Enterprise Threat Protection Kit（企业威胁防护服务）\\ArkTS API\\enterprisethreatprotectionkit-arktsapi.md",
+        "line": 10,
+        "url": "virusRemediation（文件访问与处置）/enterprisethreatprotection-virusremediation-interface.md",
+        "text": "virusRemediation（文件访问与处置）"
+      },
+      {
+        "from": "harmonyos-references\\Enterprise Threat Protection Kit（企业威胁防护服务）\\ArkTS API\\virusRemediation（文件访问与处置）\\enterprisethreatprotection-virusremediation-interface.md",
+        "line": 181,
+        "url": "enterprisethreatprotection-virusremediation-interface.md#isolatedfileinfo",
+        "text": "IsolatedFileInfo"
+      },
+      {
+        "from": "harmonyos-references\\Enterprise Threat Protection Kit（企业威胁防护服务）\\ArkTS API\\virusRemediation（文件访问与处置）\\enterprisethreatprotection-virusremediation-interface.md",
+        "line": 264,
+        "url": "enterprisethreatprotection-virusremediation-interface.md#scantargettype",
+        "text": "ScanTargetType"
+      },
+      {
+        "from": "harmonyos-references\\Enterprise Threat Protection Kit（企业威胁防护服务）\\ArkTS API\\virusRemediation（文件访问与处置）\\enterprisethreatprotection-virusremediation-interface.md",
+        "line": 265,
+        "url": "enterprisethreatprotection-virusremediation-interface.md#scancallback",
+        "text": "ScanCallback"
+      },
+      {
+        "from": "harmonyos-references\\Enterprise Threat Protection Kit（企业威胁防护服务）\\ArkTS API\\virusRemediation（文件访问与处置）\\enterprisethreatprotection-virusremediation-interface.md",
+        "line": 389,
+        "url": "enterprisethreatprotection-virusremediation-interface.md#querycallback",
+        "text": "QueryCallback"
+      }
+    ],
+    "harmonyos-references\\Ability Kit（程序框架服务）\\ArkTS API\\接口依赖的元素及定义\\application\\EmbeddableUIAbilityContext\\js-apis-inner-application-embeddableuiabilitycontext.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 228,
+        "url": "<Ability Kit（程序框架服务）/ArkTS API/接口依赖的元素及定义/application/EmbeddableUIAbilityContext/js-apis-inner-application-embeddableuiabilitycontext.md>",
+        "text": "EmbeddableUIAbilityContext"
+      },
+      {
+        "from": "harmonyos-references\\Ability Kit（程序框架服务）\\ArkTS API\\Stage模型能力的接口\\@ohos.app.ability.common (Ability公共模块)\\js-apis-app-ability-common.md",
+        "line": 284,
+        "url": "../../接口依赖的元素及定义/application/EmbeddableUIAbilityContext/js-apis-inner-application-embeddableuiabilitycontext.md",
+        "text": "\\_EmbeddableUIAbilityContext.default"
+      },
+      {
+        "from": "harmonyos-references\\Ability Kit（程序框架服务）\\ArkTS API\\Stage模型能力的接口\\@ohos.app.ability.EmbeddableUIAbility (可嵌入式UIAbility组件)\\js-apis-app-ability-embeddableuiability.md",
+        "line": 40,
+        "url": "../../接口依赖的元素及定义/application/EmbeddableUIAbilityContext/js-apis-inner-application-embeddableuiabilitycontext.md",
+        "text": "EmbeddableUIAbilityContext"
+      },
+      {
+        "from": "harmonyos-references\\Ability Kit（程序框架服务）\\ArkTS API\\接口依赖的元素及定义\\application\\ability-arkts-application.md",
+        "line": 25,
+        "url": "EmbeddableUIAbilityContext/js-apis-inner-application-embeddableuiabilitycontext.md",
+        "text": "EmbeddableUIAbilityContext"
+      }
+    ],
+    "harmonyos-references\\Ability Kit（程序框架服务）\\C API\\结构体\\OH_NativeBundle_AbilityResourceInfo\\capi-native-bundle-oh-nativebundle-abilityresourceinfo.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 316,
+        "url": "<Ability Kit（程序框架服务）/C API/结构体/OH_NativeBundle_AbilityResourceInfo/capi-native-bundle-oh-nativebundle-abilityresourceinfo.md>",
+        "text": "OH_NativeBundle_AbilityResourceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Ability Kit（程序框架服务）\\C API\\头文件\\ability_resource_info.h\\capi-ability-resource-info-h.md",
+        "line": 36,
+        "url": "../../结构体/OH_NativeBundle_AbilityResourceInfo/capi-native-bundle-oh-nativebundle-abilityresourceinfo.md",
+        "text": "OH\\_NativeBundle\\_AbilityResourceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Ability Kit（程序框架服务）\\C API\\头文件\\ability_resource_info.h\\capi-ability-resource-info-h.md",
+        "line": 52,
+        "url": "../../结构体/OH_NativeBundle_AbilityResourceInfo/capi-native-bundle-oh-nativebundle-abilityresourceinfo.md",
+        "text": "OH\\_NativeBundle\\_AbilityResourceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Ability Kit（程序框架服务）\\C API\\头文件\\ability_resource_info.h\\capi-ability-resource-info-h.md",
+        "line": 284,
+        "url": "../../结构体/OH_NativeBundle_AbilityResourceInfo/capi-native-bundle-oh-nativebundle-abilityresourceinfo.md",
+        "text": "OH\\_NativeBundle\\_AbilityResourceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Ability Kit（程序框架服务）\\C API\\头文件\\ability_resource_info.h\\capi-ability-resource-info-h.md",
+        "line": 292,
+        "url": "../../结构体/OH_NativeBundle_AbilityResourceInfo/capi-native-bundle-oh-nativebundle-abilityresourceinfo.md",
+        "text": "OH\\_NativeBundle\\_AbilityResourceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Ability Kit（程序框架服务）\\C API\\头文件\\native_interface_bundle.h\\capi-native-interface-bundle-h.md",
+        "line": 235,
+        "url": "../../结构体/OH_NativeBundle_AbilityResourceInfo/capi-native-bundle-oh-nativebundle-abilityresourceinfo.md",
+        "text": "OH\\_NativeBundle\\_AbilityResourceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Ability Kit（程序框架服务）\\C API\\结构体\\ability-struct.md",
+        "line": 22,
+        "url": "OH_NativeBundle_AbilityResourceInfo/capi-native-bundle-oh-nativebundle-abilityresourceinfo.md",
+        "text": "OH\\_NativeBundle\\_AbilityResourceInfo"
+      }
+    ],
+    "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 333,
+        "url": "<Accessibility Kit（无障碍服务）/ArkTS API/AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md>",
+        "text": "AccessibilityExtensionContext (辅助功能扩展上下文)"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\accessibility-arkts.md",
+        "line": 14,
+        "url": "<AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md>",
+        "text": "AccessibilityExtensionContext (辅助功能扩展上下文)"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 38,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md>",
+        "text": "AccessibilityExtensionContext"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 55,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement>",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 67,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement>",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 73,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement>",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 89,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#elementattributevalues>",
+        "text": "ElementAttributeValues"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 95,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#elementattributevalues>",
+        "text": "ElementAttributeValues"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 111,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#focusdirection>",
+        "text": "FocusDirection"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 117,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#focusdirection>",
+        "text": "FocusDirection"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 133,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#elementattributevalues>",
+        "text": "ElementAttributeValues"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 139,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#elementattributevalues>",
+        "text": "ElementAttributeValues"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 139,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#elementattributevalues>",
+        "text": "ElementAttributeValues"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 155,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#focustype>",
+        "text": "FocusType"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 161,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#focustype>",
+        "text": "FocusType"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 177,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#windowtype>",
+        "text": "WindowType"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 183,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#windowtype>",
+        "text": "WindowType"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 199,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#rect>",
+        "text": "Rect"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 205,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#rect>",
+        "text": "Rect"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 221,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md>",
+        "text": "AccessibilityExtensionContext"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)\\js-apis-application-accessib_81754614.md",
+        "line": 227,
+        "url": "<../AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md>",
+        "text": "AccessibilityExtensionContext"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 53,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 78,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 80,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#rect",
+        "text": "Rect"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 82,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 83,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#rect",
+        "text": "Rect"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 91,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#windowtype",
+        "text": "WindowType"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 98,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#rect",
+        "text": "Rect"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 288,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 333,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 381,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 435,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 480,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 528,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 582,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 624,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 669,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 706,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityextensioncontextinjectgesturesyncdeprecated",
+        "text": "AccessibilityExtensionContext.injectGestureSync"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 760,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityextensioncontextinjectgesturesyncdeprecated",
+        "text": "AccessibilityExtensionContext.injectGestureSync"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 846,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityextensioncontextgetfocuselementdeprecated",
+        "text": "AccessibilityExtensionContext.getFocusElement()"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 846,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityextensioncontextgetwindowrootelementdeprecated",
+        "text": "AccessibilityExtensionContext.getWindowRootElement()"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 1288,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 1333,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 1379,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#focustype",
+        "text": "FocusType"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 1385,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 1430,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#focustype",
+        "text": "FocusType"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 1431,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 1478,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#focusdirection",
+        "text": "FocusDirection"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 1484,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 1529,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#focusdirection",
+        "text": "FocusDirection"
+      },
+      {
+        "from": "harmonyos-references\\Accessibility Kit（无障碍服务）\\ArkTS API\\AccessibilityExtensionContext (辅助功能扩展上下文)\\js-apis-inner-application-accessibilityextensioncontext.md",
+        "line": 1530,
+        "url": "js-apis-inner-application-accessibilityextensioncontext.md#accessibilityelement",
+        "text": "AccessibilityElement"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\通用属性\\无障碍属性\\ts-universal-attributes-accessibility.md",
+        "line": 594,
+        "url": "<../../../../Accessibility Kit（无障碍服务）/ArkTS API/AccessibilityExtensionContext (辅助功能扩展上下文)/js-apis-inner-application-accessibilityextensioncontext.md#elementattributevalues>",
+        "text": "ElementAttributeValues"
+      }
+    ],
+    "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\通用属性\\动态属性与自定义\\动态SymbolGlyphModifier属性设置\\ts-universal-attributes-attribute-symbolglyphmodifier.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 1202,
+        "url": "ArkUI（方舟UI框架）/ArkTS组件/通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md",
+        "text": "动态SymbolGlyphModifier属性设置"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\AtomicService\\AtomicServiceSearch\\ohos-atomicservice-atomicservicesearch.md",
+        "line": 111,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\NavDestination\\ts-basic-components-navdestination.md",
+        "line": 194,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier12+"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\NavDestination\\ts-basic-components-navdestination.md",
+        "line": 217,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\Navigation\\ts-basic-components-navigation.md",
+        "line": 360,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\Navigation\\ts-basic-components-navigation.md",
+        "line": 370,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier12+"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\Navigation\\ts-basic-components-navigation.md",
+        "line": 384,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\Navigation\\ts-basic-components-navigation.md",
+        "line": 394,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\Navigation\\ts-basic-components-navigation.md",
+        "line": 1972,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\Navigation\\ts-basic-components-navigation.md",
+        "line": 1972,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\Navigation\\ts-basic-components-navigation.md",
+        "line": 1989,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\Navigation\\ts-basic-components-navigation.md",
+        "line": 1989,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\Navigation\\ts-basic-components-navigation.md",
+        "line": 1990,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\Navigation\\ts-basic-components-navigation.md",
+        "line": 1990,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\TabContent\\ts-container-tabcontent.md",
+        "line": 758,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\导航与切换\\TabContent\\ts-container-tabcontent.md",
+        "line": 759,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\按钮与选择\\Select\\ts-basic-components-select.md",
+        "line": 50,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\按钮与选择\\Select\\ts-basic-components-select.md",
+        "line": 938,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\按钮与选择\\Select\\ts-basic-components-select.md",
+        "line": 1108,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\文本与输入\\输入框类组件通用接口\\ts-universal-attributes-text-style.md",
+        "line": 320,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\Chip\\ohos-arkui-advanced-chip.md",
+        "line": 236,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\Chip\\ohos-arkui-advanced-chip.md",
+        "line": 237,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ChipGroup\\ohos-arkui-advanced-chipgroup.md",
+        "line": 193,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ChipGroup\\ohos-arkui-advanced-chipgroup.md",
+        "line": 217,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ChipGroup\\ohos-arkui-advanced-chipgroup.md",
+        "line": 235,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ComposeListItem\\ohos-arkui-advanced-composelistitem.md",
+        "line": 65,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ComposeListItem\\ohos-arkui-advanced-composelistitem.md",
+        "line": 113,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ComposeListItem\\ohos-arkui-advanced-composelistitem.md",
+        "line": 129,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ComposeTitleBar\\ohos-arkui-advanced-composetitlebar.md",
+        "line": 68,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\EditableTitleBar\\ohos-arkui-advanced-editabletitlebar.md",
+        "line": 91,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ExceptionPrompt\\ohos-arkui-advanced-exceptionprompt.md",
+        "line": 67,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\GridObjectSortComponent\\ohos-arkui-advanced-gridobjectsortcomponent.md",
+        "line": 109,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\SegmentButtonV2\\ohos-arkui-advanced-segmentbuttonv2.md",
+        "line": 360,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\SelectTitleBar\\ohos-arkui-advanced-selecttitlebar.md",
+        "line": 71,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\SubHeaderV2\\ohos-arkui-advanced-subheaderv2.md",
+        "line": 76,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\SubHeaderV2\\ohos-arkui-advanced-subheaderv2.md",
+        "line": 263,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\TabTitleBar\\ohos-arkui-advanced-tabtitlebar.md",
+        "line": 67,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\TabTitleBar\\ohos-arkui-advanced-tabtitlebar.md",
+        "line": 87,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ToolBar\\ohos-arkui-advanced-toolbar.md",
+        "line": 239,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ToolBar\\ohos-arkui-advanced-toolbar.md",
+        "line": 240,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ToolBarV2\\ohos-arkui-advanced-toolbarv2.md",
+        "line": 437,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ToolBarV2\\ohos-arkui-advanced-toolbarv2.md",
+        "line": 438,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ToolBarV2\\ohos-arkui-advanced-toolbarv2.md",
+        "line": 474,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\ToolBarV2\\ohos-arkui-advanced-toolbarv2.md",
+        "line": 475,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\TreeView\\ohos-arkui-advanced-treeview.md",
+        "line": 168,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\TreeView\\ohos-arkui-advanced-treeview.md",
+        "line": 170,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\系统预置UI组件库\\TreeView\\ohos-arkui-advanced-treeview.md",
+        "line": 172,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\菜单\\Menu\\ts-basic-components-menu.md",
+        "line": 177,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\菜单\\MenuItem\\ts-basic-components-menuitem.md",
+        "line": 53,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\菜单\\MenuItem\\ts-basic-components-menuitem.md",
+        "line": 54,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\菜单\\MenuItem\\ts-basic-components-menuitem.md",
+        "line": 100,
+        "url": "../../通用属性/动态属性与自定义/动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md",
+        "text": "SymbolGlyphModifier"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\通用属性\\动态属性与自定义\\attribute-modifier-property.md",
+        "line": 15,
+        "url": "动态SymbolGlyphModifier属性设置/ts-universal-attributes-attribute-symbolglyphmodifier.md",
+        "text": "动态SymbolGlyphModifier属性设置"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\ArkTS组件\\通用属性\\动态属性与自定义\\动态SymbolGlyphModifier属性设置\\ts-universal-attributes-attribute-symbolglyphmodifier.md",
+        "line": 66,
+        "url": "ts-universal-attributes-attribute-symbolglyphmodifier.md#symbolglyphmodifier",
+        "text": "SymbolGlyphModifier"
+      }
+    ],
+    "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_AccessibilityProviderCallbacks\\capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 1293,
+        "url": "<ArkUI（方舟UI框架）/C API/结构体/ArkUI_AccessibilityProviderCallbacks/capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md>",
+        "text": "ArkUI_AccessibilityProviderCallbacks"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_interface_accessibility.h\\capi-native-interface-accessibility-h.md",
+        "line": 43,
+        "url": "../../结构体/ArkUI_AccessibilityProviderCallbacks/capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md",
+        "text": "ArkUI\\_AccessibilityProviderCallbacks"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_interface_accessibility.h\\capi-native-interface-accessibility-h.md",
+        "line": 162,
+        "url": "../../结构体/ArkUI_AccessibilityProviderCallbacks/capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md#findnextfocusaccessibilitynode",
+        "text": "findNextFocusAccessibilityNode"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_interface_accessibility.h\\capi-native-interface-accessibility-h.md",
+        "line": 307,
+        "url": "../../结构体/ArkUI_AccessibilityProviderCallbacks/capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md",
+        "text": "ArkUI\\_AccessibilityProviderCallbacks"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\arkui-struct.md",
+        "line": 56,
+        "url": "ArkUI_AccessibilityProviderCallbacks/capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md",
+        "text": "ArkUI\\_AccessibilityProviderCallbacks"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_AccessibilityProviderCallbacks\\capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md",
+        "line": 36,
+        "url": "capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md#findaccessibilitynodeinfosbyid",
+        "text": "int32\\_t (\\*findAccessibilityNodeInfosById)(int64\\_t elementId, ArkUI\\_AccessibilitySearchMode mode, int32\\_t requestId, ArkUI\\_AccessibilityElementInfoList\\* elementList)"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_AccessibilityProviderCallbacks\\capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md",
+        "line": 37,
+        "url": "capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md#findaccessibilitynodeinfosbytext",
+        "text": "int32\\_t (\\*findAccessibilityNodeInfosByText)(int64\\_t elementId, const char\\* text, int32\\_t requestId,ArkUI\\_AccessibilityElementInfoList\\* elementList)"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_AccessibilityProviderCallbacks\\capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md",
+        "line": 38,
+        "url": "capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md#findfocusedaccessibilitynode",
+        "text": "int32\\_t (\\*findFocusedAccessibilityNode)(int64\\_t elementId, ArkUI\\_AccessibilityFocusType focusType, int32\\_t requestId, ArkUI\\_AccessibilityElementInfo\\* elementInfo)"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_AccessibilityProviderCallbacks\\capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md",
+        "line": 39,
+        "url": "capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md#findnextfocusaccessibilitynode",
+        "text": "int32\\_t (\\*findNextFocusAccessibilityNode)(int64\\_t elementId, ArkUI\\_AccessibilityFocusMoveDirection direction, int32\\_t requestId, ArkUI\\_AccessibilityElementInfo\\* elementInfo)"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_AccessibilityProviderCallbacks\\capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md",
+        "line": 40,
+        "url": "capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md#executeaccessibilityaction",
+        "text": "int32\\_t (\\*executeAccessibilityAction)(int64\\_t elementId, ArkUI\\_Accessibility\\_ActionType action,ArkUI\\_AccessibilityActionArguments \\*actionArguments, int32\\_t requestId)"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_AccessibilityProviderCallbacks\\capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md",
+        "line": 41,
+        "url": "capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md#clearfocusedfocusaccessibilitynode",
+        "text": "int32\\_t (\\*clearFocusedFocusAccessibilityNode)()"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_AccessibilityProviderCallbacks\\capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md",
+        "line": 42,
+        "url": "capi-arkui-a11y-arkui-accessibilityprovidercallbacks.md#getaccessibilitynodecursorposition",
+        "text": "int32\\_t (\\*getAccessibilityNodeCursorPosition)(int64\\_t elementId, int32\\_t requestId, int32\\_t\\* index)"
+      }
+    ],
+    "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_DrawableDescriptor_AnimationController\\capi-arkui-arkui-drawabledescriptoranimationcontroller.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 1337,
+        "url": "<ArkUI（方舟UI框架）/C API/结构体/ArkUI_DrawableDescriptor_AnimationController/capi-arkui-arkui-drawabledescriptoranimationcontroller.md>",
+        "text": "ArkUI_DrawableDescriptor_AnimationController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\drawable_descriptor.h\\capi-drawable-descriptor-h.md",
+        "line": 43,
+        "url": "../../结构体/ArkUI_DrawableDescriptor_AnimationController/capi-arkui-arkui-drawabledescriptoranimationcontroller.md",
+        "text": "ArkUI\\_DrawableDescriptor\\_AnimationController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\drawable_descriptor.h\\capi-drawable-descriptor-h.md",
+        "line": 561,
+        "url": "../../结构体/ArkUI_DrawableDescriptor_AnimationController/capi-arkui-arkui-drawabledescriptoranimationcontroller.md",
+        "text": "ArkUI\\_DrawableDescriptor\\_AnimationController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\drawable_descriptor.h\\capi-drawable-descriptor-h.md",
+        "line": 587,
+        "url": "../../结构体/ArkUI_DrawableDescriptor_AnimationController/capi-arkui-arkui-drawabledescriptoranimationcontroller.md",
+        "text": "ArkUI\\_DrawableDescriptor\\_AnimationController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\drawable_descriptor.h\\capi-drawable-descriptor-h.md",
+        "line": 607,
+        "url": "../../结构体/ArkUI_DrawableDescriptor_AnimationController/capi-arkui-arkui-drawabledescriptoranimationcontroller.md",
+        "text": "ArkUI\\_DrawableDescriptor\\_AnimationController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\drawable_descriptor.h\\capi-drawable-descriptor-h.md",
+        "line": 633,
+        "url": "../../结构体/ArkUI_DrawableDescriptor_AnimationController/capi-arkui-arkui-drawabledescriptoranimationcontroller.md",
+        "text": "ArkUI\\_DrawableDescriptor\\_AnimationController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\drawable_descriptor.h\\capi-drawable-descriptor-h.md",
+        "line": 659,
+        "url": "../../结构体/ArkUI_DrawableDescriptor_AnimationController/capi-arkui-arkui-drawabledescriptoranimationcontroller.md",
+        "text": "ArkUI\\_DrawableDescriptor\\_AnimationController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\drawable_descriptor.h\\capi-drawable-descriptor-h.md",
+        "line": 685,
+        "url": "../../结构体/ArkUI_DrawableDescriptor_AnimationController/capi-arkui-arkui-drawabledescriptoranimationcontroller.md",
+        "text": "ArkUI\\_DrawableDescriptor\\_AnimationController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\drawable_descriptor.h\\capi-drawable-descriptor-h.md",
+        "line": 711,
+        "url": "../../结构体/ArkUI_DrawableDescriptor_AnimationController/capi-arkui-arkui-drawabledescriptoranimationcontroller.md",
+        "text": "ArkUI\\_DrawableDescriptor\\_AnimationController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\arkui-struct.md",
+        "line": 18,
+        "url": "ArkUI_DrawableDescriptor_AnimationController/capi-arkui-arkui-drawabledescriptoranimationcontroller.md",
+        "text": "ArkUI\\_DrawableDescriptor\\_AnimationController"
+      }
+    ],
+    "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\ArkUI_TextCascadePickerRangeContentArray\\capi-arkui-arkui-textcascadepickerrangecontentarray.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 1418,
+        "url": "<ArkUI（方舟UI框架）/C API/结构体/ArkUI_TextCascadePickerRangeContentArray/capi-arkui-arkui-textcascadepickerrangecontentarray.md>",
+        "text": "ArkUI_TextCascadePickerRangeContentArray"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 89,
+        "url": "../../结构体/ArkUI_TextCascadePickerRangeContentArray/capi-arkui-arkui-textcascadepickerrangecontentarray.md",
+        "text": "ArkUI\\_TextCascadePickerRangeContentArray"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 10165,
+        "url": "../../结构体/ArkUI_TextCascadePickerRangeContentArray/capi-arkui-arkui-textcascadepickerrangecontentarray.md",
+        "text": "TextCascadePickerRangeContent"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 10179,
+        "url": "../../结构体/ArkUI_TextCascadePickerRangeContentArray/capi-arkui-arkui-textcascadepickerrangecontentarray.md",
+        "text": "ArkUI\\_TextCascadePickerRangeContentArray"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 10199,
+        "url": "../../结构体/ArkUI_TextCascadePickerRangeContentArray/capi-arkui-arkui-textcascadepickerrangecontentarray.md",
+        "text": "ArkUI\\_TextCascadePickerRangeContentArray"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 10221,
+        "url": "../../结构体/ArkUI_TextCascadePickerRangeContentArray/capi-arkui-arkui-textcascadepickerrangecontentarray.md",
+        "text": "ArkUI\\_TextCascadePickerRangeContentArray"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 10222,
+        "url": "../../结构体/ArkUI_TextCascadePickerRangeContentArray/capi-arkui-arkui-textcascadepickerrangecontentarray.md",
+        "text": "ArkUI\\_TextCascadePickerRangeContentArray"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 10243,
+        "url": "../../结构体/ArkUI_TextCascadePickerRangeContentArray/capi-arkui-arkui-textcascadepickerrangecontentarray.md",
+        "text": "ArkUI\\_TextCascadePickerRangeContentArray"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\arkui-struct.md",
+        "line": 138,
+        "url": "ArkUI_TextCascadePickerRangeContentArray/capi-arkui-arkui-textcascadepickerrangecontentarray.md",
+        "text": "ArkUI\\_TextCascadePickerRangeContentArray"
+      }
+    ],
+    "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\OH_ArkUI_TextEditorStyledStringController\\capi-arkui-oh-arkui-texteditorstyledstringcontroller.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 1473,
+        "url": "<ArkUI（方舟UI框架）/C API/结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md>",
+        "text": "OH_ArkUI_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 116,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13621,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController\\*"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13621,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13641,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13641,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13661,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13661,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13688,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13688,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13715,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13715,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13744,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13744,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13771,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13771,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13797,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13797,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13827,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13827,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13854,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 13854,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 14406,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 14406,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 15552,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 15552,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 15579,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 15579,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 16028,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 16028,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 16054,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 16054,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 16082,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 16082,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 16109,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 16109,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 16136,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\头文件\\native_type.h\\capi-native-type-h.md",
+        "line": 16136,
+        "url": "../../结构体/OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      },
+      {
+        "from": "harmonyos-references\\ArkUI（方舟UI框架）\\C API\\结构体\\arkui-struct.md",
+        "line": 219,
+        "url": "OH_ArkUI_TextEditorStyledStringController/capi-arkui-oh-arkui-texteditorstyledstringcontroller.md",
+        "text": "OH\\_ArkUI\\_TextEditorStyledStringController"
+      }
+    ],
+    "harmonyos-references\\ArkWeb（方舟Web）\\ArkTS 组件\\Web\\Class (ClientAuthenticationHandler)\\arkts-basic-components-web-clientauthenticationhandler.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 1760,
+        "url": "<ArkWeb（方舟Web）/ArkTS 组件/Web/Class (ClientAuthenticationHandler)/arkts-basic-components-web-clientauthenticationhandler.md>",
+        "text": "Class (ClientAuthenticationHandler)"
+      },
+      {
+        "from": "harmonyos-references\\ArkWeb（方舟Web）\\ArkTS 组件\\Web\\ts-basic-components-web.md",
+        "line": 13,
+        "url": "<Class (ClientAuthenticationHandler)/arkts-basic-components-web-clientauthenticationhandler.md>",
+        "text": "Class (ClientAuthenticationHandler)"
+      },
+      {
+        "from": "harmonyos-references\\ArkWeb（方舟Web）\\ArkTS 组件\\Web\\Interfaces（其他）\\arkts-basic-components-web-i.md",
+        "line": 486,
+        "url": "<../Class (ClientAuthenticationHandler)/arkts-basic-components-web-clientauthenticationhandler.md>",
+        "text": "ClientAuthenticationHandler"
+      },
+      {
+        "from": "harmonyos-references\\ArkWeb（方舟Web）\\ArkTS 组件\\Web\\事件\\arkts-basic-components-web-events.md",
+        "line": 1645,
+        "url": "<../Class (ClientAuthenticationHandler)/arkts-basic-components-web-clientauthenticationhandler.md#confirm10>",
+        "text": "ClientAuthenticationHandler.confirm"
+      },
+      {
+        "from": "harmonyos-references\\ArkWeb（方舟Web）\\ArkTS 组件\\Web\\事件\\arkts-basic-components-web-events.md",
+        "line": 1645,
+        "url": "<../Class (ClientAuthenticationHandler)/arkts-basic-components-web-clientauthenticationhandler.md#cancel9>",
+        "text": "ClientAuthenticationHandler.cancel"
+      },
+      {
+        "from": "harmonyos-references\\ArkWeb（方舟Web）\\ArkTS 组件\\Web\\事件\\arkts-basic-components-web-events.md",
+        "line": 1645,
+        "url": "<../Class (ClientAuthenticationHandler)/arkts-basic-components-web-clientauthenticationhandler.md#ignore9>",
+        "text": "ClientAuthenticationHandler.ignore"
+      },
+      {
+        "from": "harmonyos-references\\ArkWeb（方舟Web）\\ArkTS 组件\\Web\\组件描述\\arkts-basic-components-web.md",
+        "line": 22,
+        "url": "<../Class (ClientAuthenticationHandler)/arkts-basic-components-web-clientauthenticationhandler.md>",
+        "text": "ClientAuthenticationHandler"
+      }
+    ],
+    "harmonyos-references\\C API\\结构体\\JSVM_PropertyHandlerConfigurationStruct\\capi-jsvm-jsvm-propertyhandlerconfigurationstruct8h.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 1994,
+        "url": "<C API/结构体/JSVM_PropertyHandlerConfigurationStruct/capi-jsvm-jsvm-propertyhandlerconfigurationstruct8h.md>",
+        "text": "JSVM_PropertyHandlerConfigurationStruct*"
+      },
+      {
+        "from": "harmonyos-references\\C API\\头文件\\jsvm.h\\capi-jsvm-h.md",
+        "line": 4651,
+        "url": "../../结构体/JSVM_PropertyHandlerConfigurationStruct/capi-jsvm-jsvm-propertyhandlerconfigurationstruct8h.md",
+        "text": "JSVM\\_PropertyHandlerCfg"
+      },
+      {
+        "from": "harmonyos-references\\C API\\头文件\\jsvm_types.h\\capi-jsvm-types-h.md",
+        "line": 65,
+        "url": "../../结构体/JSVM_PropertyHandlerConfigurationStruct/capi-jsvm-jsvm-propertyhandlerconfigurationstruct8h.md",
+        "text": "JSVM\\_PropertyHandlerConfigurationStruct\\*"
+      },
+      {
+        "from": "harmonyos-references\\C API\\结构体\\common-basic-struct.md",
+        "line": 38,
+        "url": "JSVM_PropertyHandlerConfigurationStruct/capi-jsvm-jsvm-propertyhandlerconfigurationstruct8h.md",
+        "text": "JSVM\\_PropertyHandlerConfigurationStruct\\*"
+      },
+      {
+        "from": "harmonyos-references\\C API\\结构体\\JSVM_PropertyHandler\\capi-jsvm-jsvm-propertyhandler.md",
+        "line": 46,
+        "url": "../JSVM_PropertyHandlerConfigurationStruct/capi-jsvm-jsvm-propertyhandlerconfigurationstruct8h.md",
+        "text": "JSVM\\_PropertyHandlerCfg"
+      }
+    ],
+    "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\结构体\\OH_CryptoAsymKeyGeneratorWithSpec\\capi-cryptoasymkeyapi-oh-cryptoasymkeygeneratorwithspec.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 2306,
+        "url": "<Crypto Architecture Kit（加解密算法框架服务）/C API/结构体/OH_CryptoAsymKeyGeneratorWithSpec/capi-cryptoasymkeyapi-oh-cryptoasymkeygeneratorwithspec.md>",
+        "text": "OH_CryptoAsymKeyGeneratorWithSpec"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_key.h\\capi-crypto-asym-key-h.md",
+        "line": 42,
+        "url": "../../结构体/OH_CryptoAsymKeyGeneratorWithSpec/capi-cryptoasymkeyapi-oh-cryptoasymkeygeneratorwithspec.md",
+        "text": "OH\\_CryptoAsymKeyGeneratorWithSpec"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_key.h\\capi-crypto-asym-key-h.md",
+        "line": 858,
+        "url": "../../结构体/OH_CryptoAsymKeyGeneratorWithSpec/capi-cryptoasymkeyapi-oh-cryptoasymkeygeneratorwithspec.md",
+        "text": "OH\\_CryptoAsymKeyGeneratorWithSpec"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_key.h\\capi-crypto-asym-key-h.md",
+        "line": 886,
+        "url": "../../结构体/OH_CryptoAsymKeyGeneratorWithSpec/capi-cryptoasymkeyapi-oh-cryptoasymkeygeneratorwithspec.md",
+        "text": "OH\\_CryptoAsymKeyGeneratorWithSpec"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_key.h\\capi-crypto-asym-key-h.md",
+        "line": 913,
+        "url": "../../结构体/OH_CryptoAsymKeyGeneratorWithSpec/capi-cryptoasymkeyapi-oh-cryptoasymkeygeneratorwithspec.md",
+        "text": "OH\\_CryptoAsymKeyGeneratorWithSpec"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\结构体\\crypto-architecture-struct.md",
+        "line": 19,
+        "url": "OH_CryptoAsymKeyGeneratorWithSpec/capi-cryptoasymkeyapi-oh-cryptoasymkeygeneratorwithspec.md",
+        "text": "OH\\_CryptoAsymKeyGeneratorWithSpec"
+      }
+    ],
+    "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\结构体\\OH_CryptoPrivKeyEncodingParams\\capi-cryptoasymkeyapi-oh-cryptoprivkeyencodingparams.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 2317,
+        "url": "<Crypto Architecture Kit（加解密算法框架服务）/C API/结构体/OH_CryptoPrivKeyEncodingParams/capi-cryptoasymkeyapi-oh-cryptoprivkeyencodingparams.md>",
+        "text": "OH_CryptoPrivKeyEncodingParams"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_key.h\\capi-crypto-asym-key-h.md",
+        "line": 40,
+        "url": "../../结构体/OH_CryptoPrivKeyEncodingParams/capi-cryptoasymkeyapi-oh-cryptoprivkeyencodingparams.md",
+        "text": "OH\\_CryptoPrivKeyEncodingParams"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_key.h\\capi-crypto-asym-key-h.md",
+        "line": 525,
+        "url": "../../结构体/OH_CryptoPrivKeyEncodingParams/capi-cryptoasymkeyapi-oh-cryptoprivkeyencodingparams.md",
+        "text": "OH\\_CryptoPrivKeyEncodingParams"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_key.h\\capi-crypto-asym-key-h.md",
+        "line": 551,
+        "url": "../../结构体/OH_CryptoPrivKeyEncodingParams/capi-cryptoasymkeyapi-oh-cryptoprivkeyencodingparams.md",
+        "text": "OH\\_CryptoPrivKeyEncodingParams"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_key.h\\capi-crypto-asym-key-h.md",
+        "line": 579,
+        "url": "../../结构体/OH_CryptoPrivKeyEncodingParams/capi-cryptoasymkeyapi-oh-cryptoprivkeyencodingparams.md",
+        "text": "OH\\_CryptoPrivKeyEncodingParams"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_key.h\\capi-crypto-asym-key-h.md",
+        "line": 604,
+        "url": "../../结构体/OH_CryptoPrivKeyEncodingParams/capi-cryptoasymkeyapi-oh-cryptoprivkeyencodingparams.md",
+        "text": "OH\\_CryptoPrivKeyEncodingParams"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\结构体\\crypto-architecture-struct.md",
+        "line": 17,
+        "url": "OH_CryptoPrivKeyEncodingParams/capi-cryptoasymkeyapi-oh-cryptoprivkeyencodingparams.md",
+        "text": "OH\\_CryptoPrivKeyEncodingParams"
+      }
+    ],
+    "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\结构体\\OH_CryptoSm2CiphertextSpec\\capi-cryptoasymcipherapi-oh-cryptosm2ciphertextspec.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 2321,
+        "url": "<Crypto Architecture Kit（加解密算法框架服务）/C API/结构体/OH_CryptoSm2CiphertextSpec/capi-cryptoasymcipherapi-oh-cryptosm2ciphertextspec.md>",
+        "text": "OH_CryptoSm2CiphertextSpec"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_cipher.h\\capi-crypto-asym-cipher-h.md",
+        "line": 37,
+        "url": "../../结构体/OH_CryptoSm2CiphertextSpec/capi-cryptoasymcipherapi-oh-cryptosm2ciphertextspec.md",
+        "text": "OH\\_CryptoSm2CiphertextSpec"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_cipher.h\\capi-crypto-asym-cipher-h.md",
+        "line": 226,
+        "url": "../../结构体/OH_CryptoSm2CiphertextSpec/capi-cryptoasymcipherapi-oh-cryptosm2ciphertextspec.md",
+        "text": "OH\\_CryptoSm2CiphertextSpec"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_cipher.h\\capi-crypto-asym-cipher-h.md",
+        "line": 254,
+        "url": "../../结构体/OH_CryptoSm2CiphertextSpec/capi-cryptoasymcipherapi-oh-cryptosm2ciphertextspec.md",
+        "text": "OH\\_CryptoSm2CiphertextSpec"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_cipher.h\\capi-crypto-asym-cipher-h.md",
+        "line": 282,
+        "url": "../../结构体/OH_CryptoSm2CiphertextSpec/capi-cryptoasymcipherapi-oh-cryptosm2ciphertextspec.md",
+        "text": "OH\\_CryptoSm2CiphertextSpec"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_cipher.h\\capi-crypto-asym-cipher-h.md",
+        "line": 312,
+        "url": "../../结构体/OH_CryptoSm2CiphertextSpec/capi-cryptoasymcipherapi-oh-cryptosm2ciphertextspec.md",
+        "text": "OH\\_CryptoSm2CiphertextSpec"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\头文件\\crypto_asym_cipher.h\\capi-crypto-asym-cipher-h.md",
+        "line": 339,
+        "url": "../../结构体/OH_CryptoSm2CiphertextSpec/capi-cryptoasymcipherapi-oh-cryptosm2ciphertextspec.md",
+        "text": "OH\\_CryptoSm2CiphertextSpec"
+      },
+      {
+        "from": "harmonyos-references\\Crypto Architecture Kit（加解密算法框架服务）\\C API\\结构体\\crypto-architecture-struct.md",
+        "line": 12,
+        "url": "OH_CryptoSm2CiphertextSpec/capi-cryptoasymcipherapi-oh-cryptosm2ciphertextspec.md",
+        "text": "OH\\_CryptoSm2CiphertextSpec"
+      }
+    ],
+    "harmonyos-references\\Image Kit（图片处理服务）\\C API\\结构体\\ImageProcessing_ColorSpaceInfo\\capi-imageprocessing-imageprocessing-colorspaceinfo.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 2793,
+        "url": "<Image Kit（图片处理服务）/C API/结构体/ImageProcessing_ColorSpaceInfo/capi-imageprocessing-imageprocessing-colorspaceinfo.md>",
+        "text": "ImageProcessing_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\头文件\\image_processing.h\\capi-image-processing-h.md",
+        "line": 118,
+        "url": "../../结构体/ImageProcessing_ColorSpaceInfo/capi-imageprocessing-imageprocessing-colorspaceinfo.md",
+        "text": "ImageProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\头文件\\image_processing.h\\capi-image-processing-h.md",
+        "line": 119,
+        "url": "../../结构体/ImageProcessing_ColorSpaceInfo/capi-imageprocessing-imageprocessing-colorspaceinfo.md",
+        "text": "ImageProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\头文件\\image_processing.h\\capi-image-processing-h.md",
+        "line": 145,
+        "url": "../../结构体/ImageProcessing_ColorSpaceInfo/capi-imageprocessing-imageprocessing-colorspaceinfo.md",
+        "text": "ImageProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\头文件\\image_processing.h\\capi-image-processing-h.md",
+        "line": 146,
+        "url": "../../结构体/ImageProcessing_ColorSpaceInfo/capi-imageprocessing-imageprocessing-colorspaceinfo.md",
+        "text": "ImageProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\头文件\\image_processing.h\\capi-image-processing-h.md",
+        "line": 147,
+        "url": "../../结构体/ImageProcessing_ColorSpaceInfo/capi-imageprocessing-imageprocessing-colorspaceinfo.md",
+        "text": "ImageProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\头文件\\image_processing.h\\capi-image-processing-h.md",
+        "line": 173,
+        "url": "../../结构体/ImageProcessing_ColorSpaceInfo/capi-imageprocessing-imageprocessing-colorspaceinfo.md",
+        "text": "ImageProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\头文件\\image_processing.h\\capi-image-processing-h.md",
+        "line": 174,
+        "url": "../../结构体/ImageProcessing_ColorSpaceInfo/capi-imageprocessing-imageprocessing-colorspaceinfo.md",
+        "text": "ImageProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\头文件\\image_processing.h\\capi-image-processing-h.md",
+        "line": 175,
+        "url": "../../结构体/ImageProcessing_ColorSpaceInfo/capi-imageprocessing-imageprocessing-colorspaceinfo.md",
+        "text": "ImageProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\头文件\\image_processing.h\\capi-image-processing-h.md",
+        "line": 201,
+        "url": "../../结构体/ImageProcessing_ColorSpaceInfo/capi-imageprocessing-imageprocessing-colorspaceinfo.md",
+        "text": "ImageProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\头文件\\image_processing_types.h\\capi-image-processing-types-h.md",
+        "line": 36,
+        "url": "../../结构体/ImageProcessing_ColorSpaceInfo/capi-imageprocessing-imageprocessing-colorspaceinfo.md",
+        "text": "ImageProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Image Kit（图片处理服务）\\C API\\结构体\\image-struct.md",
+        "line": 70,
+        "url": "ImageProcessing_ColorSpaceInfo/capi-imageprocessing-imageprocessing-colorspaceinfo.md",
+        "text": "ImageProcessing\\_ColorSpaceInfo"
+      }
+    ],
+    "harmonyos-references\\Media Kit（媒体服务）\\C API\\结构体\\OH_LowPowerAudioSinkCallback\\capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 3085,
+        "url": "<Media Kit（媒体服务）/C API/结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md>",
+        "text": "OH_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_audio_sink.h\\capi-lowpower-audio-sink-h.md",
+        "line": 522,
+        "url": "../../结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_audio_sink.h\\capi-lowpower-audio-sink-h.md",
+        "line": 548,
+        "url": "../../结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_audio_sink.h\\capi-lowpower-audio-sink-h.md",
+        "line": 568,
+        "url": "../../结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_audio_sink.h\\capi-lowpower-audio-sink-h.md",
+        "line": 594,
+        "url": "../../结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_audio_sink.h\\capi-lowpower-audio-sink-h.md",
+        "line": 622,
+        "url": "../../结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_audio_sink.h\\capi-lowpower-audio-sink-h.md",
+        "line": 650,
+        "url": "../../结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_audio_sink.h\\capi-lowpower-audio-sink-h.md",
+        "line": 678,
+        "url": "../../结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_audio_sink.h\\capi-lowpower-audio-sink-h.md",
+        "line": 706,
+        "url": "../../结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_audio_sink.h\\capi-lowpower-audio-sink-h.md",
+        "line": 734,
+        "url": "../../结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_audio_sink_base.h\\capi-lowpower-audio-sink-base-h.md",
+        "line": 37,
+        "url": "../../结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_audio_sink_base.h\\capi-lowpower-audio-sink-base-h.md",
+        "line": 50,
+        "url": "../../结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_audio_sink_base.h\\capi-lowpower-audio-sink-base-h.md",
+        "line": 178,
+        "url": "../../结构体/OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\结构体\\media-struct.md",
+        "line": 45,
+        "url": "OH_LowPowerAudioSinkCallback/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md",
+        "text": "OH\\_LowPowerAudioSinkCallback"
+      }
+    ],
+    "harmonyos-references\\Media Kit（媒体服务）\\C API\\结构体\\OH_LowPowerVideoSinkCallback\\capi-lowpowervideosink-oh-lowpowervideosinkcallback.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 3087,
+        "url": "<Media Kit（媒体服务）/C API/结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md>",
+        "text": "OH_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink.h\\capi-lowpower-video-sink-h.md",
+        "line": 633,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink.h\\capi-lowpower-video-sink-h.md",
+        "line": 659,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink.h\\capi-lowpower-video-sink-h.md",
+        "line": 679,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink.h\\capi-lowpower-video-sink-h.md",
+        "line": 705,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink.h\\capi-lowpower-video-sink-h.md",
+        "line": 733,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink.h\\capi-lowpower-video-sink-h.md",
+        "line": 761,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink.h\\capi-lowpower-video-sink-h.md",
+        "line": 789,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink.h\\capi-lowpower-video-sink-h.md",
+        "line": 817,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink.h\\capi-lowpower-video-sink-h.md",
+        "line": 845,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 37,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 45,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 47,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 48,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 49,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 50,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 51,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 67,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 112,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 135,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 156,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 178,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\lowpower_video_sink_base.h\\capi-lowpower-video-sink-base-h.md",
+        "line": 199,
+        "url": "../../结构体/OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\结构体\\media-struct.md",
+        "line": 48,
+        "url": "OH_LowPowerVideoSinkCallback/capi-lowpowervideosink-oh-lowpowervideosinkcallback.md",
+        "text": "OH\\_LowPowerVideoSinkCallback"
+      }
+    ],
+    "harmonyos-references\\Media Kit（媒体服务）\\C API\\结构体\\VideoProcessing_ColorSpaceInfo\\capi-videoprocessing-videoprocessing-colorspaceinfo.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 3098,
+        "url": "<Media Kit（媒体服务）/C API/结构体/VideoProcessing_ColorSpaceInfo/capi-videoprocessing-videoprocessing-colorspaceinfo.md>",
+        "text": "VideoProcessing_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\video_processing.h\\capi-video-processing-h.md",
+        "line": 134,
+        "url": "../../结构体/VideoProcessing_ColorSpaceInfo/capi-videoprocessing-videoprocessing-colorspaceinfo.md",
+        "text": "VideoProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\video_processing.h\\capi-video-processing-h.md",
+        "line": 135,
+        "url": "../../结构体/VideoProcessing_ColorSpaceInfo/capi-videoprocessing-videoprocessing-colorspaceinfo.md",
+        "text": "VideoProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\video_processing.h\\capi-video-processing-h.md",
+        "line": 161,
+        "url": "../../结构体/VideoProcessing_ColorSpaceInfo/capi-videoprocessing-videoprocessing-colorspaceinfo.md",
+        "text": "VideoProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\头文件\\video_processing_types.h\\capi-video-processing-types-h.md",
+        "line": 36,
+        "url": "../../结构体/VideoProcessing_ColorSpaceInfo/capi-videoprocessing-videoprocessing-colorspaceinfo.md",
+        "text": "VideoProcessing\\_ColorSpaceInfo"
+      },
+      {
+        "from": "harmonyos-references\\Media Kit（媒体服务）\\C API\\结构体\\media-struct.md",
+        "line": 49,
+        "url": "VideoProcessing_ColorSpaceInfo/capi-videoprocessing-videoprocessing-colorspaceinfo.md",
+        "text": "VideoProcessing\\_ColorSpaceInfo"
+      }
+    ],
+    "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\NotificationActionButton\\js-apis-inner-notification-notificationactionbutton.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 3242,
+        "url": "<Notification Kit（用户通知服务）/ArkTS API/notification/NotificationActionButton/js-apis-inner-notification-notificationactionbutton.md>",
+        "text": "NotificationActionButton"
+      },
+      {
+        "from": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\@ohos.notificationManager (NotificationManager模块)\\js-apis-notificationmanager.md",
+        "line": 2008,
+        "url": "../notification/NotificationActionButton/js-apis-inner-notification-notificationactionbutton.md",
+        "text": "\\_NotificationActionButton"
+      },
+      {
+        "from": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\notification.md",
+        "line": 10,
+        "url": "NotificationActionButton/js-apis-inner-notification-notificationactionbutton.md",
+        "text": "NotificationActionButton"
+      },
+      {
+        "from": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\NotificationRequest\\js-apis-inner-notification-notificationrequest.md",
+        "line": 35,
+        "url": "../NotificationActionButton/js-apis-inner-notification-notificationactionbutton.md",
+        "text": "NotificationActionButton"
+      }
+    ],
+    "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\NotificationExtensionContent\\js-apis-inner-notification-notificationextensioncontent.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 3245,
+        "url": "<Notification Kit（用户通知服务）/ArkTS API/notification/NotificationExtensionContent/js-apis-inner-notification-notificationextensioncontent.md>",
+        "text": "NotificationExtensionContent"
+      },
+      {
+        "from": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\notification.md",
+        "line": 13,
+        "url": "NotificationExtensionContent/js-apis-inner-notification-notificationextensioncontent.md",
+        "text": "NotificationExtensionContent"
+      },
+      {
+        "from": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\NotificationInfo\\js-apis-inner-notification-notificationinfo.md",
+        "line": 26,
+        "url": "../NotificationExtensionContent/js-apis-inner-notification-notificationextensioncontent.md",
+        "text": "NotificationExtensionContent"
+      }
+    ],
+    "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\NotificationExtensionSubscriptionInfo\\js-apis-inner-notificationextensionsubscriptioninfo.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 3246,
+        "url": "<Notification Kit（用户通知服务）/ArkTS API/notification/NotificationExtensionSubscriptionInfo/js-apis-inner-notificationextensionsubscriptioninfo.md>",
+        "text": "NotificationExtensionSubscriptionInfo"
+      },
+      {
+        "from": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\@ohos.notificationExtensionSubscription (notificationExtensionSubscription模块)\\js-apis-n_26046847.md",
+        "line": 298,
+        "url": "../notification/NotificationExtensionSubscriptionInfo/js-apis-inner-notificationextensionsubscriptioninfo.md",
+        "text": "\\_NotificationExtensionSubscriptionInfo"
+      },
+      {
+        "from": "harmonyos-references\\Notification Kit（用户通知服务）\\ArkTS API\\notification\\notification.md",
+        "line": 20,
+        "url": "NotificationExtensionSubscriptionInfo/js-apis-inner-notificationextensionsubscriptioninfo.md",
+        "text": "NotificationExtensionSubscriptionInfo"
+      }
+    ],
+    "harmonyos-references\\Vulkan\\Vulkan扩展能力\\VkPhysicalDevicePresentationPropertiesOHOS\\capi-vulkan-vkphysicaldevicepresentationpropertiesohos.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 3731,
+        "url": "Vulkan/Vulkan扩展能力/VkPhysicalDevicePresentationPropertiesOHOS/capi-vulkan-vkphysicaldevicepresentationpropertiesohos.md",
+        "text": "VkPhysicalDevicePresentationPropertiesOHOS"
+      },
+      {
+        "from": "harmonyos-references\\Vulkan\\Vulkan扩展能力\\vulkan-extensions.md",
+        "line": 15,
+        "url": "VkPhysicalDevicePresentationPropertiesOHOS/capi-vulkan-vkphysicaldevicepresentationpropertiesohos.md",
+        "text": "VkPhysicalDevicePresentationPropertiesOHOS"
+      },
+      {
+        "from": "harmonyos-references\\Vulkan\\Vulkan扩展能力\\vulkan_ohos.h\\capi-vulkan-ohos-h.md",
+        "line": 37,
+        "url": "../VkPhysicalDevicePresentationPropertiesOHOS/capi-vulkan-vkphysicaldevicepresentationpropertiesohos.md",
+        "text": "VkPhysicalDevicePresentationPropertiesOHOS"
+      }
+    ],
+    "harmonyos-references\\附录\\NDK涉及的musl libc接口使用限制的说明\\guidance-on-ndk-libc-interfaces-affected-by-permissions.md": [
+      {
+        "from": "harmonyos-references\\INDEX.md",
+        "line": 4047,
+        "url": "<附录/NDK涉及的musl libc接口使用限制的说明/guidance-on-ndk-libc-interfaces-affected-by-permissions.md>",
+        "text": "NDK涉及的musl libc接口使用限制的说明"
+      },
+      {
+        "from": "harmonyos-references\\libc标准库\\musl.md",
+        "line": 122,
+        "url": "<../附录/NDK涉及的musl libc接口使用限制的说明/guidance-on-ndk-libc-interfaces-affected-by-permissions.md>",
+        "text": "NDK musl-libc接口受权限影响的说明"
+      },
+      {
+        "from": "harmonyos-references\\附录\\appendixes.md",
+        "line": 11,
+        "url": "<NDK涉及的musl libc接口使用限制的说明/guidance-on-ndk-libc-interfaces-affected-by-permissions.md>",
+        "text": "NDK涉及的musl libc接口使用限制的说明"
+      }
+    ],
+    "harmonyos-references\\MDM Kit（企业设备管理服务）\\ArkTS API\\application\\EnterpriseAdminExtensionContext\\js-apis-application-enterpriseadminextensioncontext.md": [
+      {
+        "from": "harmonyos-references\\MDM Kit（企业设备管理服务）\\ArkTS API\\@ohos.enterprise.common（Enterprise公共模块）\\js-apis-enterprise-common.md",
+        "line": 98,
+        "url": "../application/EnterpriseAdminExtensionContext/js-apis-application-enterpriseadminextensioncontext.md",
+        "text": "\\_EnterpriseAdminExtensionContext.default"
+      },
+      {
+        "from": "harmonyos-references\\MDM Kit（企业设备管理服务）\\ArkTS API\\@ohos.enterprise.EnterpriseAdminExtensionAbility（企业设备管理扩展能力）\\js-apis-enterpriseadminextensionability.md",
+        "line": 42,
+        "url": "../application/EnterpriseAdminExtensionContext/js-apis-application-enterpriseadminextensioncontext.md",
+        "text": "EnterpriseAdminExtensionContext"
+      },
+      {
+        "from": "harmonyos-references\\MDM Kit（企业设备管理服务）\\ArkTS API\\application\\mdm-arkts-application.md",
+        "line": 10,
+        "url": "EnterpriseAdminExtensionContext/js-apis-application-enterpriseadminextensioncontext.md",
+        "text": "EnterpriseAdminExtensionContext"
+      }
+    ]
+  }
+}

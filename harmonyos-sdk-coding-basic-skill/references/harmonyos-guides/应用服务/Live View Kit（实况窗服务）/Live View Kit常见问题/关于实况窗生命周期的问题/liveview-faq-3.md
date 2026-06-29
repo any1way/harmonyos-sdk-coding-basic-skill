@@ -1,0 +1,22 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/liveview-faq-3
+title: 关于实况窗生命周期的问题
+breadcrumb: 指南 > 应用服务 > Live View Kit（实况窗服务） > Live View Kit常见问题 > 关于实况窗生命周期的问题
+category: harmonyos-guides
+scraped_at: 2026-06-11T15:09:19+08:00
+doc_updated_at: 2026-06-05
+content_hash: sha256:6890b34dca2ed693a11e148a4450dbfec29d39b914d613b42022d1dc04931acc
+---
+## 如何实现“App关闭时，自动关闭构建的实况窗”
+
+当App关闭时，可以调用[liveViewManager.stopLiveView](<../../../../../harmonyos-references/Live View Kit（实况窗服务）/ArkTS API/liveViewManager/liveview-liveviewmanager.md#liveviewmanagerstopliveview>)方法，设置参数[PrimaryData](<../../../../../harmonyos-references/Live View Kit（实况窗服务）/ArkTS API/liveViewManager/liveview-liveviewmanager.md#primarydata>)实例的keepTime值为0，即可实现立即关闭实况窗。
+
+## 如何实现“自动关闭构建的实况窗”
+
+从6.1.1(24)版本起，为了在应用无法主动结束实况的情况下控制实况窗的最长存活时间，应用可在创建时，通过设置[PrimaryData](<../../../../../harmonyos-references/Live View Kit（实况窗服务）/ArkTS API/liveViewManager/liveview-liveviewmanager.md#primarydata>)实例的aliveTime属性来实现自动关闭功能。
+
+## 本地更新如何获取实况窗实例以及实况窗被清除后的限制
+
+1. 本地更新实况窗时，可以通过[liveViewManager.getActiveLiveView](<../../../../../harmonyos-references/Live View Kit（实况窗服务）/ArkTS API/liveViewManager/liveview-liveviewmanager.md#liveviewmanagergetactiveliveview>)函数获取活动的[LiveView](<../../../../../harmonyos-references/Live View Kit（实况窗服务）/ArkTS API/liveViewManager/liveview-liveviewmanager.md#liveview>)实例。
+2. 如果想要结束实况窗，建议使用[liveViewManager.stopLiveView](<../../../../../harmonyos-references/Live View Kit（实况窗服务）/ArkTS API/liveViewManager/liveview-liveviewmanager.md#liveviewmanagerstopliveview>)方法。如果实况窗被notificationManager.cancel或notificationManager.cancelAll清除后，无论是Live View Kit还是Push Kit，无法再次通过该id更新或结束实况窗。
+3. 再次创建该id的实况窗时，Live View Kit可以通过该id再次创建实况窗，Push Kit在12小时内无法通过该id再次创建实况窗。

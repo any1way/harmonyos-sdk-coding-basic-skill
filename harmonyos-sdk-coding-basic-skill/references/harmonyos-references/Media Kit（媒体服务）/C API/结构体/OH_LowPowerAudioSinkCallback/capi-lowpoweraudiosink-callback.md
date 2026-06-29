@@ -1,0 +1,26 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback
+title: OH_LowPowerAudioSinkCallback
+breadcrumb: API参考 > 媒体 > Media Kit（媒体服务） > C API > 结构体 > OH_LowPowerAudioSinkCallback
+category: harmonyos-references
+scraped_at: 2026-06-11T16:34:52+08:00
+doc_updated_at: 2026-06-03
+content_hash: sha256:74791fb4387db6ef97f9b29505cf38f005f3f9be511b955e06fd58beaf05abb3
+---
+```
+1. typedef struct OH_LowPowerAudioSinkCallback OH_LowPowerAudioSinkCallback
+```
+
+## 概述
+
+PhonePC/2in1Tablet
+
+包含了LowPowerAudioSink回调函数指针的集合。
+
+应用需注册此实例结构体到[OH\_LowPowerAudioSink](../OH_LowPowerAudioSink/capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)实例中，并对回调上报的信息进行处理，保证LowPowerAudioSink的正常运行。
+
+**起始版本：** 20
+
+**相关模块：** [LowPowerAudioSink](../../模块/LowPowerAudioSink/capi-lowpoweraudiosink.md)
+
+**所在头文件：** [lowpower\_audio\_sink\_base.h](../../头文件/lowpower_audio_sink_base.h/capi-lowpower-audio-sink-base-h.md)

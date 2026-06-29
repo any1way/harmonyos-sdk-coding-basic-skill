@@ -1,0 +1,34 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/account-faq-3
+title: 一键登录场景下无法获取到匿名手机号如何解决
+breadcrumb: 指南 > 应用服务 > Account Kit（华为账号服务） > Account Kit常见问题 > 一键登录场景下无法获取到匿名手机号如何解决
+category: harmonyos-guides
+scraped_at: 2026-06-11T15:03:08+08:00
+doc_updated_at: 2026-05-14
+content_hash: sha256:caae08bb294e0535a32940f8734d8509c90e60da7991ad13c7258c7eff9550a5
+---
+在华为账号一键登录场景下无法获取到匿名手机号时，建议通过以下步骤排查解决：
+
+1. 当开发者开启了[代码混淆](../../../../应用框架/ArkTS（方舟编程语言）/ArkTS编译工具链/ArkGuard源码混淆工具/ArkGuard混淆开启指南/source-obfuscation-guide.md)时，为了防止quickLoginAnonymousPhone（匿名手机号）属性在release包中被混淆，请在调用“获取匿名手机号”方法所在工程模块的混淆文件obfuscation-rules.txt中添加如下配置：
+
+   ```
+   1. # 开发者开启属性混淆需要配置quickLoginAnonymousPhone属性白名单防止其被混淆
+   2. -enable-property-obfuscation
+   3. -keep-property-name
+   4. quickLoginAnonymousPhone
+   ```
+2. Wearable设备无法获取到手机号，会报[1001500003 不支持该scopes或permissions](<../../../../../harmonyos-references/Account Kit（华为账号服务）/ArkTS错误码/account-api-error-code.md#section1001500003-不支持该scopes或permissions>)。
+3. 华为账号未绑定手机号，该异常场景应用需要展示其他登录方式。
+4. 使用华为账号一键登录服务的账号必须是中国境内（香港特别行政区、澳门特别行政区、中国台湾除外）华为账号。
+5. 确认是否在AGC的[开发与服务](https://developer.huawei.com/consumer/cn/service/josp/agc/index.html#/myProject)中申请华为账号一键登录权限。图示为未申请状态，未申请将报错[1001502014 应用未申请scopes或permissions权限](<../1001502014 应用未申请scopes或permissions权限的可能原因和解决方法/account-faq-2.md>)。
+
+   ![](https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_scene_100_1/47/v3/-dKFULG3QEGY3q6PXTVaJw/zh-cn_image_0000002592219174.png?HW-CC-KV=V1&HW-CC-Date=20260611T070307Z&HW-CC-Expire=86400&HW-CC-Sign=6A11194032AFDDDC249D2B8B5D060FB3A2E62E8F7EE3D7272518627AC0E88275)
+6. 申请的华为账号一键登录权限待审批或待生效，**权限申请后需要24小时后生效或将调试设备的系统时间向后调整24小时后重试。**
+7. 权限申请成功后，确认scope参数是否传入的是quickLoginAnonymousPhone，详情可参考一键登录[客户端开发](../../登录/华为账号一键登录（获取手机号和UnionIDOpenID）/account-phone-unionid-login.md#客户端开发)。
+
+   ```
+   1. // 创建授权请求，并设置参数
+   2. const authRequest = new authentication.HuaweiIDProvider().createAuthorizationWithHuaweiIDRequest();
+   3. // 获取匿名手机号需传quickLoginAnonymousPhone这个scope，传参之前需要先申请“华为账号一键登录”权限，否则会返回1001502014错误码
+   4. authRequest.scopes = ['quickLoginAnonymousPhone'];
+   ```

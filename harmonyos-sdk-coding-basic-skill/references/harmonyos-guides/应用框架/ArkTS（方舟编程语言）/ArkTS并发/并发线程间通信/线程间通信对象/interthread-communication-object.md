@@ -1,0 +1,16 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/interthread-communication-object
+title: 线程间通信对象
+breadcrumb: 指南 > 应用框架 > ArkTS（方舟编程语言） > ArkTS并发 > 并发线程间通信 > 线程间通信对象
+category: harmonyos-guides
+scraped_at: 2026-06-01T11:01:06+08:00
+doc_updated_at: 2026-05-28
+content_hash: sha256:286decf5f520e1f34a12627ca46b41aa7012d52889de42c66704f3922a263291
+---
+* **[线程间通信对象概述](线程间通信对象概述/serializable-overview.md)**
+* **[普通对象](普通对象/normal-object.md)**
+* **[容器类对象](容器类对象/container-object.md)**
+* **[ArrayBuffer对象](ArrayBuffer对象/arraybuffer-object.md)**
+* **[SharedArrayBuffer对象](SharedArrayBuffer对象/shared-arraybuffer-object.md)**
+* **[Transferable对象 (NativeBinding对象)](<Transferable对象 (NativeBinding对象)/transferabled-object.md>)**
+* **[Sendable对象](Sendable对象/sendable-object.md)**

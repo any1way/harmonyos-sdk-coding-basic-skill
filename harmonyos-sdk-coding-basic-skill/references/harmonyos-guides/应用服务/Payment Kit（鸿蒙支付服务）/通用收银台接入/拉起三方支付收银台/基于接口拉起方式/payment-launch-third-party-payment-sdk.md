@@ -1,0 +1,78 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-launch-third-party-payment-sdk
+title: 基于接口拉起方式
+breadcrumb: 指南 > 应用服务 > Payment Kit（鸿蒙支付服务） > 通用收银台接入 > 拉起三方支付收银台 > 基于接口拉起方式
+category: harmonyos-guides
+scraped_at: 2026-06-01T15:08:17+08:00
+doc_updated_at: 2026-05-19
+content_hash: sha256:ea5d890df7215f5d9c0cbf3c8325a21b4690ad19a8190c85a8662ad30551ad54
+---
+说明
+
+* 当前基于接口拉起方式拉起三方支付收银台支持的支付方式参见[PayMethod](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/ArkTS API/thirdPaymentService(三方支付服务)/payment-third-payment-service.md#paymethod>)。
+* 基于接口拉起三方支付收银台起始版本为：6.0.0(20)。
+
+1. 商户客户端根据Payment Kit接口返回的支付信息[PayResult](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/ArkTS API/paymentService (鸿蒙支付服务)/payment-paymentservice.md#payresult>)(混合支付场景）/[PickerResult](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/ArkTS API/paymentService (鸿蒙支付服务)/payment-paymentservice.md#pickerresult>)（纯外部支付场景），按照三方支付平台接入要求构建三方支付信息[payInfo](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/数据模型说明/payment-model.md#payinfo>)调用[ThirdPayClient.pay](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/ArkTS API/thirdPaymentService(三方支付服务)/payment-third-payment-service.md#pay>)接口拉起三方支付收银台。
+
+   拉起三方支付收银台示例代码如下：
+
+   ```
+   1. import { BusinessError } from '@kit.BasicServicesKit';
+   2. import { thirdPaymentService } from '@kit.PaymentKit';
+   3. import { common } from '@kit.AbilityKit';
+
+   5. export let thirdPayClient: thirdPaymentService.ThirdPayClient | undefined = undefined;
+
+   7. @Entry
+   8. @Component
+   9. struct Index {
+   10. context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+   11. thirdPaymentServicePayPromise() {
+   12. thirdPayClient = new thirdPaymentService.ThirdPayClient(this.context, thirdPaymentService.PayMethod.WECHAT_PAY, "appid_123456");
+   13. // 请使用开发者自己的三方支付信息（payInfo）
+   14. const payInfo = '{"xxx1":"***", "xxx2":"***", "token":"***"}';
+   15. thirdPayClient.pay(payInfo).then(() => {
+   16. // 支付成功
+   17. console.info('succeeded in paying.');
+   18. }).catch((error: BusinessError) => {
+   19. // 支付失败
+   20. console.error(`failed to pay, error.code: ${error.code}, error.message: ${error.message}`);
+   21. });
+   22. }
+
+   24. build() {
+   25. Column() {
+   26. Button('thirdPaymentServicePayPromise')
+   27. .type(ButtonType.Capsule)
+   28. .width('50%')
+   29. .margin(20)
+   30. .onClick(() => {
+   31. this.thirdPaymentServicePayPromise();
+   32. })
+   33. }
+   34. .width('100%')
+   35. .height('100%')
+   36. }
+   37. }
+   ```
+2. 拉起三方支付收银台可同步通过调用[ThirdPayClient.handlePayCallback](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/ArkTS API/thirdPaymentService(三方支付服务)/payment-third-payment-service.md#handlepaycallback>)接口（用户支付完成后，会将支付操作结果回调给商户客户端），获取三方支付处理结果，完成支付操作处理。参考示例代码如下：
+
+   ```
+   1. import { hilog } from '@kit.PerformanceAnalysisKit';
+   2. import { UIAbility, Want } from '@kit.AbilityKit';
+   3. // 需要从thirdPayClient对象定义的代码文件中导入三方支付客户端对象，以下为示例，具体以应用定义路径为准。
+   4. import { thirdPayClient } from '../pages/thirdPaymentServicetest';
+
+   6. // 如果已有Ability实现类，可直接添加onNewWant生命周期方法处理即可。
+   7. export default class EntryAbility extends UIAbility {
+   8. onNewWant(want: Want): void {
+   9. // 需要和拉起支付收银台的三方支付客户端对象为同一个
+   10. if (thirdPayClient) {
+   11. console.info('clientForThirdPayment handlePayCallback');
+   12. let handlePayCallback = thirdPayClient.handlePayCallback(want);
+   13. console.info(`clientForThirdPayment handlePayCallback result: ${handlePayCallback}`);
+   14. }
+   15. }
+   16. }
+   ```
+3. 商户客户端收到三方支付回调通知或主动查询订单支付结果成功后，按照三方支付平台要求完成订单支付后的下一步业务处理，如对返回的支付结果信息验签等。

@@ -1,0 +1,47 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-references/driver-development-struct
+title: 结构体
+breadcrumb: API参考 > 系统 > 硬件 > Driver Development Kit（驱动开发服务） > C API > 结构体
+category: harmonyos-references
+scraped_at: 2026-06-11T16:22:58+08:00
+doc_updated_at: 2026-06-03
+content_hash: sha256:b2dc141be8cd0af3a753ba31a60a836401e8b273a6c7f78f6a319e070ef77cb4
+---
+* **[DDK\_Ashmem](DDK_Ashmem/capi-baseddk-ddk-ashmem.md)**
+* **[Hid\_EmitItem](Hid_EmitItem/capi-hidddk-hid-emititem.md)**
+* **[Hid\_Device](Hid_Device/capi-hidddk-hid-device.md)**
+* **[Hid\_EventTypeArray](Hid_EventTypeArray/capi-hidddk-hid-eventtypearray.md)**
+* **[Hid\_KeyCodeArray](Hid_KeyCodeArray/capi-hidddk-hid-keycodearray.md)**
+* **[Hid\_AbsAxesArray](Hid_AbsAxesArray/capi-hidddk-hid-absaxesarray.md)**
+* **[Hid\_RelAxesArray](Hid_RelAxesArray/capi-hidddk-hid-relaxesarray.md)**
+* **[Hid\_MscEventArray](Hid_MscEventArray/capi-hidddk-hid-msceventarray.md)**
+* **[Hid\_EventProperties](Hid_EventProperties/capi-hidddk-hid-eventproperties.md)**
+* **[Hid\_RawDevInfo](Hid_RawDevInfo/capi-hidddk-hid-rawdevinfo.md)**
+* **[Hid\_DeviceHandle](Hid_DeviceHandle/capi-hidddk-hid-devicehandle.md)**
+* **[ScsiPeripheral\_DeviceMemMap](ScsiPeripheral_DeviceMemMap/capi-scsiperipheralddk-scsiperipheral-devicememmap.md)**
+* **[ScsiPeripheral\_IORequest](ScsiPeripheral_IORequest/capi-scsiperipheralddk-scsiperipheral-iorequest.md)**
+* **[ScsiPeripheral\_Request](ScsiPeripheral_Request/capi-scsiperipheralddk-scsiperipheral-request.md)**
+* **[ScsiPeripheral\_Response](ScsiPeripheral_Response/capi-scsiperipheralddk-scsiperipheral-response.md)**
+* **[ScsiPeripheral\_TestUnitReadyRequest](ScsiPeripheral_TestUnitReadyRequest/capi-scsiperiph-testunitreadyrequest.md)**
+* **[ScsiPeripheral\_InquiryRequest](ScsiPeripheral_InquiryRequest/capi-scsiperiph-inquiryrequest.md)**
+* **[ScsiPeripheral\_InquiryInfo](ScsiPeripheral_InquiryInfo/capi-scsiperipheralddk-scsiperipheral-inquiryinfo.md)**
+* **[ScsiPeripheral\_ReadCapacityRequest](ScsiPeripheral_ReadCapacityRequest/capi-scsiperiph-readcapacityrequest.md)**
+* **[ScsiPeripheral\_CapacityInfo](ScsiPeripheral_CapacityInfo/capi-scsiperipheralddk-scsiperipheral-capacityinfo.md)**
+* **[ScsiPeripheral\_RequestSenseRequest](ScsiPeripheral_RequestSenseRequest/capi-scsiperiph-requestsenserequest.md)**
+* **[ScsiPeripheral\_BasicSenseInfo](ScsiPeripheral_BasicSenseInfo/capi-scsiperiph-basicsenseinfo.md)**
+* **[ScsiPeripheral\_VerifyRequest](ScsiPeripheral_VerifyRequest/capi-scsiperiph-verifyrequest.md)**
+* **[ScsiPeripheral\_Device](ScsiPeripheral_Device/capi-scsiperipheralddk-scsiperipheral-device.md)**
+* **[UsbControlRequestSetup](UsbControlRequestSetup/capi-usbddk-usbcontrolrequestsetup.md)**
+* **[UsbDeviceDescriptor](UsbDeviceDescriptor/capi-usbddk-usbdevicedescriptor.md)**
+* **[UsbConfigDescriptor](UsbConfigDescriptor/capi-usbddk-usbconfigdescriptor.md)**
+* **[UsbInterfaceDescriptor](UsbInterfaceDescriptor/capi-usbddk-usbinterfacedescriptor.md)**
+* **[UsbEndpointDescriptor](UsbEndpointDescriptor/capi-usbddk-usbendpointdescriptor.md)**
+* **[UsbDdkEndpointDescriptor](UsbDdkEndpointDescriptor/capi-usbddk-usbddkendpointdescriptor.md)**
+* **[UsbDdkInterfaceDescriptor](UsbDdkInterfaceDescriptor/capi-usbddk-usbddkinterfacedescriptor.md)**
+* **[UsbDdkInterface](UsbDdkInterface/capi-usbddk-usbddkinterface.md)**
+* **[UsbDdkConfigDescriptor](UsbDdkConfigDescriptor/capi-usbddk-usbddkconfigdescriptor.md)**
+* **[UsbRequestPipe](UsbRequestPipe/capi-usbddk-usbrequestpipe.md)**
+* **[UsbDeviceMemMap](UsbDeviceMemMap/capi-usbddk-usbdevicememmap.md)**
+* **[Usb\_DeviceArray](Usb_DeviceArray/capi-usbddk-usb-devicearray.md)**
+* **[UsbSerial\_Params](UsbSerial_Params/capi-serialddk-usbserial-params.md)**
+* **[UsbSerial\_Device](UsbSerial_Device/capi-serialddk-usbserial-devicehandle.md)**

@@ -1,0 +1,12 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-animation-attribute
+title: 属性动画
+breadcrumb: 指南 > 应用框架 > ArkUI（方舟UI框架） > UI开发 (ArkTS声明式开发范式) > 使用动画 > 属性动画
+category: harmonyos-guides
+scraped_at: 2026-06-01T11:05:46+08:00
+doc_updated_at: 2026-03-09
+content_hash: sha256:8aa0ffb97a797fbe85720f923fe4139a392be657100e5d093c853e81a6065347
+---
+* **[属性动画概述](属性动画概述/arkts-attribute-animation-overview.md)**
+* **[实现属性动画](实现属性动画/arkts-attribute-animation-apis.md)**
+* **[自定义属性动画](自定义属性动画/arkts-custom-attribute-animation.md)**

@@ -1,0 +1,151 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-promotion-select-coupon
+title: 选券场景
+breadcrumb: 指南 > 应用服务 > Payment Kit（鸿蒙支付服务） > 运营工具 > 平台券 > 选券场景
+category: harmonyos-guides
+scraped_at: 2026-06-11T15:11:56+08:00
+doc_updated_at: 2026-04-30
+content_hash: sha256:535f2403a184170b4fe832ab91787296c3db6ce56e48a30e48feb64f94ec9bca
+---
+## 场景介绍
+
+从6.1.0(23)版本开始，新增支持选券场景。
+
+当用户在商家服务选好商品后进入订单结算页，可选券组件切换优惠券，让用户选择可用平台券进行下单。
+
+如下图所示，首先商户应用会调用云侧接口选择1张10元优惠券，然后点击优惠券弹出选券组件，选择1张6元优惠券，最后商户应用将优惠券渲染成6元。
+
+支持商户模型：直连商户、平台类商户、服务商
+
+选券场景效果如下：
+
+![](https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_scene_100_1/b6/v3/BHRLemDlRJqviWvTxKc-7w/zh-cn_image_0000002592219534.png?HW-CC-KV=V1&HW-CC-Date=20260611T071155Z&HW-CC-Expire=86400&HW-CC-Sign=3AA5700A70E208C7B863FD4D54838A82D7B9B5A9B43805E73768D60D9FEA2F4F)
+
+## 接入流程
+
+| 步骤 | 说明 |
+| --- | --- |
+| 开发准备 | 根据[端侧应用配置](../../../开发准备/端侧应用配置/payment-config-app-identity-info.md)完成开发准备。 |
+| 接入选券组件 | 根据选券场景[开发步骤](payment-promotion-select-coupon.md#开发步骤)完成接入。 |
+
+## 业务流程
+
+关于选券场景的业务流程如下：
+
+![](https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_scene_100_1/0d/v3/7d28j188T1KNOKUmytMP0Q/zh-cn_image_0000002592379468.png?HW-CC-KV=V1&HW-CC-Date=20260611T071155Z&HW-CC-Expire=86400&HW-CC-Sign=3E8414D128C91A1EB36B8654C76D41738DB403716F0ECA84FED1B0A0ADD7B899)
+
+1. 用户选好商品后进入商家服务结算页。
+2. 商户客户端请求Payment Kit客户端查询用户可用券。
+3. Payment Kit客户端请求Payment Kit服务端查询用户可用券。
+4. Payment Kit服务端返回用户可用券信息给Payment Kit客户端。
+5. Payment Kit客户端给商户客户端返回券信息。
+6. 商户客户端展示优惠券列表中的第1张券。
+7. 用户点击优惠券进行选券。
+8. 商户客户端根据订单信息请求服务端，服务端参考[签名规则](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/REST API/公共说明/payment-rest-overview.md#签名规则>)构造[OrderContext](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/ArkTS API/promotionService(营销服务)/payment-promotionservice.md#ordercontext>) 签名信息。
+9. 商户服务端返回签名信息。
+10. 客户端根据签名信息组装好拉起选券组件的请求体，调用Payment Kit客户端[startUserChooseCouponsPopup](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/ArkTS API/promotionService(营销服务)/payment-promotionservice.md#startuserchoosecouponspopup>)接口拉起选券组件。
+11. Payment Kit客户端收到调用后，判断用户是否已签署过华为支付隐私协议，如果没签署则不走后续流程。
+12. 向服务端查询用户可用券。
+13. Payment Kit服务端返回用户可用券信息。
+14. Payment Kit客户端利用可用券信息展示出选券组件。
+15. 用户选券并点击确认按钮。
+16. Payment Kit客户端给商户客户端返回券信息。
+17. 商户客户端请求商户服务服务端创建订单。
+18. 商户服务端请求[直连商户预下单](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/REST API/直连商户/基础支付/预下单/payment-prepay.md>)或[平台类商户/服务商预下单](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/REST API/平台类商户服务商/基础支付/预下单/payment-agent-prepay.md>)接口，通过selectPromotionInfo参数传递平台券信息进行核销。
+
+## 接口说明
+
+查询用户可用券场景和选券场景涉及接口如下，更详细信息详见[API接口文档](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/ArkTS API/promotionService(营销服务)/payment-promotionservice.md#startpromotionentrydialog>)。
+
+| 接口名 | 描述 |
+| --- | --- |
+| getOrderAvailableCoupons(context: common.Context, orderContext: OrderContext): Promise<CouponDetail[]> | 查询用户可用券。 |
+| startUserChooseCouponsPopup(context: common.Context, orderContext: OrderContext): Promise<CouponDetail[]> | 拉起选券组件。 |
+
+## 开发步骤
+
+### 查询用户可用券
+
+6.1.1(24)版本前，在拉起选券组件前，商户根据[查询用户可用券](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/REST API/通用接口/运营工具/查询用户可用平台券/payment-api-common-promotion-service-inquiry.md>)接口查询用户可用券，如果用户无可用券可不拉起选券组件。业务接口请求示例代码可参考[业务接口请求](../../../开发准备/云侧服务准备/payment-server-connect.md#业务接口请求)。
+
+从6.1.1(24)版本开始，客户端可调[getOrderAvailableCoupons](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/ArkTS API/promotionService(营销服务)/payment-promotionservice.md#getorderavailablecoupons>)接口查询用户可用券。示例代码如下：
+
+```
+1. import { promotionService } from "@kit.PaymentKit";
+
+3. @Component
+4. export struct StartUserChooseCouponsPopupDemo {
+5. build() {
+6. Column() {
+7. Button('查询可用券')
+8. .type(ButtonType.Capsule)
+9. .width('50%')
+10. .margin(20)
+11. .onClick(() => {
+12. let req: promotionService.OrderContext = {
+13. // 商户号
+14. mercNo: '',
+15. // 订单金额，单位为分
+16. tradeOrderAmount: 15,
+17. // 商品编码
+18. goodsCodes: ['', ''],
+19. // 商户证书ID
+20. authId: '',
+21. // 签名内容调云侧接口获取
+22. sign: 'MEQCIEIWzdpziRyTi8vhwWHFuDdxf********************CHljer0YAMabeCgTDG77e+2XJItvq/ZkIcCN5/B20pQ=='
+23. }
+24. console.info(`req ${JSON.stringify(req)}`);
+25. promotionService.getOrderAvailableCoupons(this.getUIContext().getHostContext()!, req).then(res => {
+26. console.error(`getOrderAvailableCoupons res ${JSON.stringify(res)}.`);
+27. }).catch((e: BusinessError) => {
+28. console.error(`getOrderAvailableCoupons error ${JSON.stringify(e)}`);
+29. })
+30. })
+31. }
+32. }
+33. }
+```
+
+### 拉起选券组件（端侧开发）
+
+针对选券场景，商户服务需要先选券组件引导用户选券。示例代码如下：
+
+```
+1. import { promotionService } from "@kit.PaymentKit";
+
+3. @Component
+4. export struct StartUserChooseCouponsPopupDemo {
+5. build() {
+6. Column() {
+7. Button('选券页面')
+8. .type(ButtonType.Capsule)
+9. .width('50%')
+10. .margin(20)
+11. .onClick(() => {
+12. let req: promotionService.OrderContext = {
+13. // 商户号
+14. mercNo: '100000000000',
+15. // 订单金额，单位为分
+16. tradeOrderAmount: 15,
+17. // 商品编码
+18. goodsCodes: ['goodsCode0', 'goodsCode1'],
+19. // 商户证书ID
+20. authId: '123',
+21. // 签名内容调云侧接口获取
+22. sign: 'MEQCIEIWzdpziRyTi8vhwWHFuDdxf********************CHljer0YAMabeCgTDG77e+2XJItvq/ZkIcCN5/B20pQ=='
+23. }
+24. console.error(`req ${JSON.stringify(req)}`);
+25. promotionService.startUserChooseCouponsPopup(this.getUIContext().getHostContext()!, req).then(res => {
+26. console.error(`startUserChooseCouponsPopup res ${JSON.stringify(res)}.`);
+27. }).catch((e: BusinessError) => {
+28. console.error(`startUserSelectCouponsPopup error ${JSON.stringify(e)}`);
+29. })
+30. })
+31. }
+32. }
+33. }
+```
+
+### 使用平台券（服务端开发）
+
+商家可以在创建订单时，请求[直连商户预下单](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/REST API/直连商户/基础支付/预下单/payment-prepay.md>)或[平台类商户/服务商预下单](<../../../../../../harmonyos-references/Payment Kit（鸿蒙支付服务）/REST API/平台类商户服务商/基础支付/预下单/payment-agent-prepay.md>)接口，通过selectPromotionInfo参数传递平台券信息进行核销。

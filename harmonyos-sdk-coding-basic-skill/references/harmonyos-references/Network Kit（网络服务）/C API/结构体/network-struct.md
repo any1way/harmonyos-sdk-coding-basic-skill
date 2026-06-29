@@ -1,0 +1,47 @@
+---
+url: https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-struct
+title: 结构体
+breadcrumb: API参考 > 系统 > 网络 > Network Kit（网络服务） > C API > 结构体
+category: harmonyos-references
+scraped_at: 2026-06-01T16:07:06+08:00
+doc_updated_at: 2026-04-30
+content_hash: sha256:77ff2d92e18b5778dd51376297634201ce9ad601eab8e765048d6019ecd52eb4
+---
+* **[NetConn\_NetHandle](NetConn_NetHandle/capi-netconnection-netconn-nethandle.md)**
+* **[NetConn\_NetCapabilities](NetConn_NetCapabilities/capi-netconnection-netconn-netcapabilities.md)**
+* **[NetConn\_NetAddr](NetConn_NetAddr/capi-netconnection-netconn-netaddr.md)**
+* **[NetConn\_Route](NetConn_Route/capi-netconnection-netconn-route.md)**
+* **[NetConn\_HttpProxy](NetConn_HttpProxy/capi-netconnection-netconn-httpproxy.md)**
+* **[NetConn\_ConnectionProperties](NetConn_ConnectionProperties/capi-netconnection-netconn-connectionproperties.md)**
+* **[NetConn\_NetHandleList](NetConn_NetHandleList/capi-netconnection-netconn-nethandlelist.md)**
+* **[NetConn\_NetSpecifier](NetConn_NetSpecifier/capi-netconnection-netconn-netspecifier.md)**
+* **[NetConn\_NetConnCallback](NetConn_NetConnCallback/capi-netconnection-netconn-netconncallback.md)**
+* **[NetConn\_ProbeResultInfo](NetConn_ProbeResultInfo/capi-netconnection-netconn-proberesultinfo.md)**
+* **[NetConn\_TraceRouteInfo](NetConn_TraceRouteInfo/capi-netconnection-netconn-tracerouteinfo.md)**
+* **[NetConn\_TraceRouteOption](NetConn_TraceRouteOption/capi-netconnection-netconn-tracerouteoption.md)**
+* **[NetStack\_CertBlob](NetStack_CertBlob/capi-netstack-netstack-certblob.md)**
+* **[NetStack\_CertificatePinning](NetStack_CertificatePinning/capi-netstack-netstack-certificatepinning.md)**
+* **[NetStack\_Certificates](NetStack_Certificates/capi-netstack-netstack-certificates.md)**
+* **[WebSocket](WebSocket/capi-netstack-websocket.md)**
+* **[WebSocket\_CloseResult](WebSocket_CloseResult/capi-netstack-websocket-closeresult.md)**
+* **[WebSocket\_CloseOption](WebSocket_CloseOption/capi-netstack-websocket-closeoption.md)**
+* **[WebSocket\_ErrorResult](WebSocket_ErrorResult/capi-netstack-websocket-errorresult.md)**
+* **[WebSocket\_OpenResult](WebSocket_OpenResult/capi-netstack-websocket-openresult.md)**
+* **[WebSocket\_Header](WebSocket_Header/capi-netstack-websocket-header.md)**
+* **[WebSocket\_RequestOptions](WebSocket_RequestOptions/capi-netstack-websocket-requestoptions.md)**
+* **[Http\_Buffer](Http_Buffer/capi-netstack-http-buffer.md)**
+* **[Http\_HeaderValue](Http_HeaderValue/capi-netstack-http-headervalue.md)**
+* **[Http\_HeaderEntry](Http_HeaderEntry/capi-netstack-http-headerentry.md)**
+* **[Http\_ClientCert](Http_ClientCert/capi-netstack-http-clientcert.md)**
+* **[Http\_CustomProxy](Http_CustomProxy/capi-netstack-http-customproxy.md)**
+* **[Http\_Proxy](Http_Proxy/capi-netstack-http-proxy.md)**
+* **[Http\_PerformanceTiming](Http_PerformanceTiming/capi-netstack-http-performancetiming.md)**
+* **[Http\_RequestOptions](Http_RequestOptions/capi-netstack-http-requestoptions.md)**
+* **[Http\_Response](Http_Response/capi-netstack-http-response.md)**
+* **[Http\_Request](Http_Request/capi-netstack-http-request.md)**
+* **[Http\_EventsHandler](Http_EventsHandler/capi-netstack-http-eventshandler.md)**
+* **[Http\_Headers](Http_Headers/capi-netstack-http-headers.md)**
+* **[OH\_Http\_Interceptor\_Headers](OH_Http_Interceptor_Headers/capi-netstack-http-interceptor-headers.md)**
+* **[OH\_Http\_Interceptor\_Request](OH_Http_Interceptor_Request/capi-netstack-http-interceptor-request.md)**
+* **[OH\_Http\_Interceptor\_Response](OH_Http_Interceptor_Response/capi-netstack-http-interceptor-response.md)**
+* **[OH\_Http\_Interceptor](OH_Http_Interceptor/capi-netstack-http-interceptor.md)**
