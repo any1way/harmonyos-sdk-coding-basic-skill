@@ -1,0 +1,13 @@
+{
+  "built_at": "2026-06-27T15:53:47",
+  "built_at_epoch": 1782546827.8898125,
+  "model": "BAAI/bge-small-zh-v1.5",
+  "model_path": "d:\\projects\\Skills\\harmonyos-sdk-skills\\harmonyos\\harmonyos-sdk-coding-basic-skill\\models\\BAAI\\bge-small-zh-v1___5",
+  "embed_dim": 512,
+  "total_docs": 12232,
+  "max_seq_len": 512,
+  "device": "cpu",
+  "batch_size": 32,
+  "vectors_size_mb": 23.89,
+  "faiss_index_size_mb": 23.89
+}

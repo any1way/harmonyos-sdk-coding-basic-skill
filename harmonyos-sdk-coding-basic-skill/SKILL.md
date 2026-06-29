@@ -95,12 +95,14 @@ python scripts/search_hybrid.py "AVPlayer" --weights 0.7 0.3 --top 5
 python scripts/search_hybrid.py "音频播放" --top 5 --json
 ```
 
-> **首次运行 Hybrid 检索**：自动完成以下三步（无需手动干预）：
+> **首次运行 Hybrid 检索**：仓库已内置模型（`models/`，~92MB）和索引（`scripts/index/`，~163MB），克隆后即可直接查询，无需下载和构建。
+>
+> **自动维护机制**（仅在缺失或过期时触发）：
 > 1. **模型下载** — 若 `models/BAAI/bge-small-zh-v1.5/` 缺失，自动通过 ModelScope 下载（约 100MB，国内速度快）；ModelScope 不可用时回退 HuggingFace 镜像（hf-mirror.com）。
 > 2. **BM25 索引** — 若 `scripts/index/docs.pkl` 缺失或 `references/` 有更新，自动调用 `build_index.py` 重建（约 1 分钟）。
 > 3. **Dense 索引** — 若 `scripts/index/dense_vectors.npy` 缺失，自动调用 `build_dense_index.py` 编码 12000+ 篇文档（约 10 分钟，含模型加载）。
 >
-> 首次总耗时约 10–15 分钟，之后查询通常在 200–500ms 内返回（含 query 编码）。纯 BM25 检索在 20ms 内返回，无依赖。
+> 查询通常在 200–500ms 内返回（含 query 编码）。纯 BM25 检索在 20ms 内返回，无依赖。
 
 #### 标准检索流程
 
