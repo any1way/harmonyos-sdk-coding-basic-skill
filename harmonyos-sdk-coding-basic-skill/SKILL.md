@@ -93,7 +93,12 @@ python scripts/search_hybrid.py "AVPlayer" --weights 0.7 0.3 --top 5
 
 # 机器可读 JSON 输出
 python scripts/search_hybrid.py "音频播放" --top 5 --json
+
+# 关闭分类优先级加成（默认开启：guides > best > api > faq > release）
+python scripts/search_hybrid.py "网络请求" --top 8 --no-category-priority
 ```
+
+> **分类优先级**：默认对 RRF 分数叠加分类权重（guides +10% / best +8% / api +5% / faq +3% / release +0%），使开发指南和最佳实践略优先于 API 参考和 FAQ。权重接近 1.0，仅在 RRF 同分附近起决定作用，不会让低相关性的 guides 压过高相关性的 api。可用 `--no-category-priority` 关闭。
 
 > **首次运行 Hybrid 检索**：仓库已内置模型（`models/`，~92MB）和索引（`scripts/index/`，~163MB），克隆后即可直接查询，无需下载和构建。
 >

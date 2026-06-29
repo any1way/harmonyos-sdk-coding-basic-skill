@@ -14,6 +14,11 @@ RRF 公式：score(d) = Σ_c  1 / (k + rank_c(d))，默认 k=60。
     python scripts/search_hybrid.py "怎么让应用启动更快" --top 5 --snippet
     python scripts/search_hybrid.py "AVPlayer setURL" --category api
     python scripts/search_hybrid.py "音频播放" --weights 0.4 0.6 --json
+    python scripts/search_hybrid.py "网络请求" --no-category-priority
+
+分类优先级（默认开启）：guides(+10%) > best(+8%) > api(+5%) > faq(+3%) > release(+0%)
+对 RRF 分数叠加分类权重，使开发指南略优先于 API 参考；权重接近 1.0，不破坏相关性。
+可用 --no-category-priority 关闭。
 
 依赖：
     - BM25 索引（scripts/index/docs.pkl + inverted.pkl），由 build_index.py 构建
@@ -51,6 +56,16 @@ _REQUIRED_DEPS = {
 # 可选依赖（缺失时降级到 HF 镜像下载）
 _OPTIONAL_DEPS = {
     "modelscope": "modelscope",
+}
+
+# 分类优先级权重：在 RRF 分数上叠加，使 guides/best-practices 略优先于 api/faq/release
+# 权重接近 1.0，保证仅在同分附近起决定作用，不会让低相关性的 guides 压过高相关性的 api
+CATEGORY_PRIORITY_WEIGHTS: Dict[str, float] = {
+    "harmonyos-guides": 1.10,       # 指南：开发指导，优先级最高
+    "best-practices": 1.08,         # 最佳实践：性能/最佳实践
+    "harmonyos-references": 1.05,   # API 参考：接口文档
+    "harmonyos-faqs": 1.03,         # FAQ：常见问题
+    "harmonyos-releases": 1.00,     # Release：版本说明（不加成）
 }
 
 
@@ -283,7 +298,8 @@ def hybrid_search(query: str,
                   category: Optional[str] = None,
                   k: int = 60,
                   weights: Tuple[float, float] = (0.5, 0.5),
-                  with_snippet: bool = False
+                  with_snippet: bool = False,
+                  category_priority: bool = True
                   ) -> Tuple[List[Tuple[int, float, dict]], List[dict],
                              List[str], float, int]:
     # 1. BM25 召回（Top 30）
@@ -333,6 +349,17 @@ def hybrid_search(query: str,
     # 3. RRF 融合
     t0 = time.time()
     fused = rrf_fuse(bm25_hits, dense_hits, k=k, weights=weights)
+
+    # 4. 分类优先级加成：对 RRF 分数乘以分类权重，使 guides/best-practices 略优先
+    # 权重接近 1.0，仅在同分附近起作用，不会破坏 RRF 的相关性排序
+    if category_priority:
+        for i, (doc_id, score, info) in enumerate(fused):
+            cat = bm25_documents[doc_id].get("category", "")
+            boost = CATEGORY_PRIORITY_WEIGHTS.get(cat, 1.0)
+            if boost != 1.0:
+                fused[i] = (doc_id, score * boost, info)
+        fused.sort(key=lambda x: x[1], reverse=True)
+
     elapsed = time.time() - t0 + 0.001  # 至少有点耗时
 
     fused = fused[:top]
@@ -367,6 +394,8 @@ def main() -> int:
                     help="两路融合权重，默认 0.5 0.5")
     ap.add_argument("--snippet", action="store_true", help="展示文档摘要片段")
     ap.add_argument("--json", action="store_true", help="输出 JSON")
+    ap.add_argument("--no-category-priority", action="store_true",
+                    help="关闭分类优先级加成（默认 guides>best>api>faq>release）")
     args = ap.parse_args()
 
     # 归一化权重
@@ -378,6 +407,7 @@ def main() -> int:
     fused, documents, query_terms, elapsed, total = hybrid_search(
         args.query, top=args.top, category=args.category,
         k=args.k, weights=w, with_snippet=args.snippet,
+        category_priority=not args.no_category_priority,
     )
 
     if args.json:
