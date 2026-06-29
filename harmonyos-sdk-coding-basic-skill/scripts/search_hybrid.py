@@ -38,6 +38,49 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, _HERE)
 import build_index as _bi  # noqa: E402
 import search as _bm25  # noqa: E402
+
+# ----------------------------- 依赖自检 -----------------------------
+
+# Hybrid 检索所需的第三方依赖及安装提示
+_REQUIRED_DEPS = {
+    "faiss": "faiss-cpu",
+    "torch": "torch",
+    "transformers": "transformers",
+    "numpy": "numpy",
+}
+# 可选依赖（缺失时降级到 HF 镜像下载）
+_OPTIONAL_DEPS = {
+    "modelscope": "modelscope",
+}
+
+
+def _check_dependencies() -> None:
+    """检查 Hybrid 检索所需的依赖是否已安装，缺失时输出友好提示并退出。
+
+    纯 BM25（search.py）不需要任何第三方依赖，可独立使用。
+    Hybrid 检索（search_hybrid.py）需要 faiss/torch/transformers/numpy。
+    """
+    missing = []
+    for mod, pkg in _REQUIRED_DEPS.items():
+        try:
+            __import__(mod)
+        except ImportError:
+            missing.append(pkg)
+    if not missing:
+        return
+    # 依赖缺失，输出友好提示
+    print("[错误] Hybrid 检索缺少必要的 Python 依赖：", file=sys.stderr)
+    print(f"  缺失：{', '.join(missing)}", file=sys.stderr)
+    print("", file=sys.stderr)
+    print("请安装依赖（任选一种）：", file=sys.stderr)
+    print(f"  pip install {' '.join(missing)}", file=sys.stderr)
+    print(f"  或完整安装：pip install faiss-cpu torch transformers numpy modelscope",
+          file=sys.stderr)
+    print("", file=sys.stderr)
+    print("或降级使用纯 BM25 检索（无需任何依赖）：", file=sys.stderr)
+    print("  python search.py \"查询词\"", file=sys.stderr)
+    sys.exit(1)
+
 import build_dense_index as _dense  # noqa: E402
 
 ROOT = _bi.ROOT
@@ -312,6 +355,7 @@ def _normalize_category(category: str) -> str:
 
 
 def main() -> int:
+    _check_dependencies()
     ap = argparse.ArgumentParser(description="HarmonyOS SDK 文档 Hybrid (BM25+Dense+RRF) 检索")
     ap.add_argument("query", help="查询字符串")
     ap.add_argument("--top", type=int, default=10, help="返回 Top N（默认 10）")

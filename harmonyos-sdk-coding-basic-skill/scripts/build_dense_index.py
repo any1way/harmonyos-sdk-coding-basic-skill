@@ -374,7 +374,30 @@ def _count_md_files() -> int:
     return n
 
 
+def _check_dependencies() -> None:
+    """检查构建 Dense 索引所需的依赖是否已安装，缺失时输出友好提示并退出。"""
+    required = {"faiss": "faiss-cpu", "torch": "torch",
+                "transformers": "transformers", "numpy": "numpy"}
+    missing = []
+    for mod, pkg in required.items():
+        try:
+            __import__(mod)
+        except ImportError:
+            missing.append(pkg)
+    if not missing:
+        return
+    print("[错误] 构建 Dense 索引缺少必要的 Python 依赖：", file=sys.stderr)
+    print(f"  缺失：{', '.join(missing)}", file=sys.stderr)
+    print("", file=sys.stderr)
+    print("请安装依赖：", file=sys.stderr)
+    print(f"  pip install {' '.join(missing)}", file=sys.stderr)
+    print(f"  或完整安装：pip install faiss-cpu torch transformers numpy modelscope",
+          file=sys.stderr)
+    sys.exit(1)
+
+
 def main() -> int:
+    _check_dependencies()
     ap = argparse.ArgumentParser(description="构建 BGE Dense 向量索引")
     ap.add_argument("--force", action="store_true", help="强制重建")
     ap.add_argument("--batch", type=int, default=32, help="batch size（默认 32）")
