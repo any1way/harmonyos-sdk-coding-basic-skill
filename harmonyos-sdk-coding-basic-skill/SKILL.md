@@ -95,7 +95,12 @@ python scripts/search_hybrid.py "AVPlayer" --weights 0.7 0.3 --top 5
 python scripts/search_hybrid.py "音频播放" --top 5 --json
 ```
 
-> **首次运行 Hybrid 检索**：若 Dense 索引缺失会自动触发构建（约 10 分钟，含模型加载与 12000 篇文档编码），之后查询通常在 200–500ms 内返回（含 query 编码）。纯 BM25 检索在 20ms 内返回，无依赖。
+> **首次运行 Hybrid 检索**：自动完成以下三步（无需手动干预）：
+> 1. **模型下载** — 若 `models/BAAI/bge-small-zh-v1.5/` 缺失，自动通过 ModelScope 下载（约 100MB，国内速度快）；ModelScope 不可用时回退 HuggingFace 镜像（hf-mirror.com）。
+> 2. **BM25 索引** — 若 `scripts/index/docs.pkl` 缺失或 `references/` 有更新，自动调用 `build_index.py` 重建（约 1 分钟）。
+> 3. **Dense 索引** — 若 `scripts/index/dense_vectors.npy` 缺失，自动调用 `build_dense_index.py` 编码 12000+ 篇文档（约 10 分钟，含模型加载）。
+>
+> 首次总耗时约 10–15 分钟，之后查询通常在 200–500ms 内返回（含 query 编码）。纯 BM25 检索在 20ms 内返回，无依赖。
 
 #### 标准检索流程
 
@@ -133,8 +138,9 @@ Hybrid Top 5 results for "怎么让应用启动更快" (searched 12232 docs in 0
 
 - **Dense 模型**：`BAAI/bge-small-zh-v1.5`（24M 参数，512 维，Apache-2.0），CPU 友好。
   - 选 small 而非 m3（568M）：CPU 推理速度差 ~20x（10 分钟 vs 3+ 小时），Top-N 召回场景精度差距可接受。
-  - 通过 ModelScope 下载，约 100MB。
-- **依赖**：torch（CPU 版）+ transformers + faiss-cpu + numpy，约 2GB。
+  - 首次运行自动下载到 `models/BAAI/bge-small-zh-v1.5/`（约 100MB），优先 ModelScope，回退 HF 镜像。
+- **依赖**：torch（CPU 版）+ transformers + faiss-cpu + numpy + modelscope（可选，用于模型下载），约 2GB。
+  - 安装：`pip install torch transformers faiss-cpu numpy modelscope`
 - **纯 BM25 回退**：若未安装上述依赖，`search.py` 仍可独立使用（纯 Python 标准库）。
 
 #### 索引维护

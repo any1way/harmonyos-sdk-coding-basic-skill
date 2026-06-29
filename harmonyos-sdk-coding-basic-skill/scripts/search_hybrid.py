@@ -80,12 +80,16 @@ def load_dense_index() -> Tuple[List[dict], np.ndarray, "faiss.Index", dict]:
 # ----------------------------- Dense 检索 -----------------------------
 
 def _get_model():
-    """懒加载并缓存 BGE 模型实例。"""
+    """懒加载并缓存 BGE 模型实例。若索引记录的本地路径已失效，重新下载。"""
     if MODEL_PATH_CACHE[0] is not None:
         return MODEL_PATH_CACHE[0]
     with open(DENSE_META_PATH, "r", encoding="utf-8") as f:
         meta = json.load(f)
     model_path = meta.get("model_path", _dense.MODEL_NAME)
+    # 保护：索引存在但模型目录被删除时，重新下载
+    if model_path != _dense.MODEL_NAME and not _dense._is_model_present(model_path):
+        print(f"[warn] 模型目录缺失：{model_path}，重新下载...", file=sys.stderr)
+        model_path = _dense.ensure_model()
     use_gpu = meta.get("device") == "cuda"
     model_info = _dense.load_model(model_path, use_gpu=use_gpu)
     MODEL_PATH_CACHE[0] = model_info

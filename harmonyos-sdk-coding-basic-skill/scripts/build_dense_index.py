@@ -193,25 +193,105 @@ def build_faiss_index(vectors: np.ndarray) -> "faiss.Index":
     return index
 
 
-# ----------------------------- 主流程 -----------------------------
+# ----------------------------- 模型下载 -----------------------------
 
-def find_model_path() -> str:
-    """定位模型路径。ModelScope 会把模型名中的 '.' 替换为 '___'。"""
-    # 从 MODEL_NAME 推导可能的目录名
+def _is_model_present(path: str) -> bool:
+    """检查目录是否包含可加载的模型文件。"""
+    if not os.path.isdir(path):
+        return False
+    if not os.path.exists(os.path.join(path, "config.json")):
+        return False
+    has_weights = (os.path.exists(os.path.join(path, "model.safetensors"))
+                   or os.path.exists(os.path.join(path, "pytorch_model.bin")))
+    return has_weights
+
+
+def _model_candidates() -> List[str]:
+    """推导模型可能的本地目录（兼容 ModelScope 新旧命名）。"""
     base_name = MODEL_NAME.split("/")[-1]
-    escaped_name = base_name.replace(".", "___")
+    escaped_name = base_name.replace(".", "___")  # ModelScope 旧版转义
     org = MODEL_NAME.split("/")[0] if "/" in MODEL_NAME else "BAAI"
-    candidates = [
+    return [
         os.path.join(MODELS_DIR, org, base_name),
-        os.path.join(MODELS_DIR, org, escaped_name),  # modelscope 转义
+        os.path.join(MODELS_DIR, org, escaped_name),
         os.path.join(MODELS_DIR, base_name),
         os.path.join(MODELS_DIR, escaped_name),
     ]
-    for c in candidates:
-        if os.path.exists(os.path.join(c, "config.json")):
+
+
+def _download_via_modelscope() -> str:
+    """通过 ModelScope 下载模型到 models/ 目录（国内速度快，推荐）。"""
+    from modelscope import snapshot_download
+    print(f"[info] 通过 ModelScope 下载 {MODEL_NAME} 到 {MODELS_DIR} ...")
+    snapshot_download(
+        model_id=MODEL_NAME,
+        cache_dir=MODELS_DIR,
+    )
+    # ModelScope 下载后检查候选目录
+    for c in _model_candidates():
+        if _is_model_present(c):
             return c
-    # 兜底：让 transformers 自动从 HF 下载
+    raise RuntimeError("ModelScope 下载完成但未找到模型文件")
+
+
+def _download_via_hf_mirror() -> str:
+    """通过 HuggingFace 镜像（hf-mirror.com）下载到 models/ 目录。"""
+    os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
+    from huggingface_hub import snapshot_download as hf_download
+    base_name = MODEL_NAME.split("/")[-1]
+    org = MODEL_NAME.split("/")[0] if "/" in MODEL_NAME else "BAAI"
+    target_dir = os.path.join(MODELS_DIR, org, base_name)
+    print(f"[info] 通过 HuggingFace 镜像下载 {MODEL_NAME} 到 {target_dir} ...")
+    hf_download(
+        repo_id=MODEL_NAME,
+        local_dir=target_dir,
+    )
+    if _is_model_present(target_dir):
+        return target_dir
+    raise RuntimeError("HF 镜像下载完成但未找到模型文件")
+
+
+def ensure_model() -> str:
+    """确保模型已下载到 models/ 目录，返回本地路径。
+
+    下载优先级：
+    1. 本地已存在 → 直接返回
+    2. ModelScope（国内速度快，与 SKILL.md 声明一致）
+    3. HuggingFace 镜像（hf-mirror.com，备选）
+    4. 回退到 MODEL_NAME（让 transformers 自动下载到 ~/.cache/，最后兜底）
+    """
+    # 1. 检查本地
+    for c in _model_candidates():
+        if _is_model_present(c):
+            print(f"[info] 模型已存在：{c}")
+            return c
+
+    os.makedirs(MODELS_DIR, exist_ok=True)
+
+    # 2. ModelScope
+    try:
+        return _download_via_modelscope()
+    except ImportError:
+        print("[warn] modelscope 未安装，尝试 HuggingFace 镜像")
+    except Exception as e:
+        print(f"[warn] ModelScope 下载失败：{e}")
+
+    # 3. HF 镜像
+    try:
+        return _download_via_hf_mirror()
+    except ImportError:
+        print("[warn] huggingface_hub 未安装")
+    except Exception as e:
+        print(f"[warn] HF 镜像下载失败：{e}")
+
+    # 4. 兜底：让 transformers 自动下载（可能到 ~/.cache/huggingface/）
+    print(f"[warn] 所有显式下载方式失败，回退到 transformers 默认下载路径")
     return MODEL_NAME
+
+
+def find_model_path() -> str:
+    """定位模型本地路径，缺失时自动下载到 models/ 目录。"""
+    return ensure_model()
 
 
 def build_dense_index(force: bool = False, batch_size: int = 32) -> None:
