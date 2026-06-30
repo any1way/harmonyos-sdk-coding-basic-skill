@@ -1,4 +1,4 @@
-用途：本技能用于鸿蒙APP开发者使用AI Agent编程时候的查询指南和API参考知识。
+用途：本技能为harmonyos-sdk-coding-basic-skill中的本地知识检索部件，用于鸿蒙APP开发者使用AI Agent编程时候的查询指南和API参考知识。本技能非HarmonyOS SDK场景化技能，场景化技能参见鸿蒙SDK相关技能文档。
 用法：把整个目录解压到Agent配置的skills目录下；
 
 ## Windows 用户重要提示：长路径支持

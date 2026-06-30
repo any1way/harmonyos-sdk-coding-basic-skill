@@ -1,6 +1,6 @@
 {
-  "built_at": "2026-06-27T15:40:54",
-  "built_at_epoch": 1782546054.8976576,
+  "built_at": "2026-06-29T16:45:58",
+  "built_at_epoch": 1782722758.0862021,
   "total_docs": 12232,
   "avg_doc_length": 2947.68,
   "vocabulary_size": 570487,
@@ -11,5 +11,5 @@
   "body_weight": 1.0,
   "path_weight": 1.0,
   "skipped": 0,
-  "references_dir": "d:\\projects\\Skills\\harmonyos-sdk-skills\\harmonyos\\harmonyos-sdk-coding-basic-skill\\references"
+  "references_dir": "D:\\projects\\Skills\\harmonyos-sdk-skills\\harmonyos\\harmonyos-sdk-coding-basic-skill\\references"
 }
